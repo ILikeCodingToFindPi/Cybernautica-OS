@@ -2,7 +2,7 @@ import { useState, useCallback } from "react";
 
 export interface Window {
   id: string;
-  type: "terminal" | "arcade" | "app-center" | "file-manager" | "settings";
+  type: "terminal" | "arcade" | "app-center" | "file-manager" | "settings" | "codeundrum-app" | "hackademia-app" | "cyphranexus-app" | "high-stakes-app" | "breaking-virtual-app" | "geometry-dash-app" | "sonaria-app";
   title: string;
   position: { x: number; y: number };
   size: { width: number; height: number };
@@ -97,7 +97,15 @@ function getDefaultSize(type: Window["type"]): { width: number; height: number }
     case "file-manager":
       return { width: 700, height: 500 };
     case "settings":
-      return { width: 500, height: 400 };
+      return { width: 900, height: 650 };
+    case "codeundrum-app":
+    case "hackademia-app":
+    case "cyphranexus-app":
+    case "high-stakes-app":
+    case "breaking-virtual-app":
+    case "geometry-dash-app":
+    case "sonaria-app":
+      return { width: 1000, height: 700 };
     default:
       return { width: 600, height: 400 };
   }

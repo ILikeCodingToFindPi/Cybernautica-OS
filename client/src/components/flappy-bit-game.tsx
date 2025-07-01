@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 interface GameState {
   bird: { x: number; y: number; velocity: number };
-  pipes: Array<{ x: number; height: number }>;
+  pipes: Array<{ x: number; height: number; scored?: boolean }>;
   score: number;
   isGameRunning: boolean;
   isGameOver: boolean;
@@ -27,6 +27,8 @@ export default function FlappyBitGame() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    let animationId: number;
+
     const updateGame = () => {
       if (!gameState.isGameRunning || gameState.isGameOver) return;
 
@@ -34,19 +36,20 @@ export default function FlappyBitGame() {
         const newState = { ...prev };
         
         // Update bird physics
-        newState.bird.velocity += 0.5; // gravity
+        newState.bird.velocity += 0.6; // gravity
         newState.bird.y += newState.bird.velocity;
         
         // Update pipes
         newState.pipes = newState.pipes
-          .map(pipe => ({ ...pipe, x: pipe.x - 2 }))
-          .filter(pipe => pipe.x > -50);
+          .map(pipe => ({ ...pipe, x: pipe.x - 3 }))
+          .filter(pipe => pipe.x > -60);
         
         // Add new pipes
-        if (newState.pipes.length === 0 || newState.pipes[newState.pipes.length - 1].x < 300) {
+        if (newState.pipes.length === 0 || newState.pipes[newState.pipes.length - 1].x < 250) {
           newState.pipes.push({
             x: 400,
-            height: Math.random() * 200 + 100,
+            height: Math.random() * 150 + 50,
+            scored: false,
           });
         }
         
@@ -59,74 +62,130 @@ export default function FlappyBitGame() {
           newState.isGameRunning = false;
         }
         
-        // Pipe collision
-        newState.pipes.forEach(pipe => {
+        // Pipe collision with improved detection
+        for (const pipe of newState.pipes) {
+          const pipeGap = 120;
           const pipeTopRect = { x: pipe.x, y: 0, width: 50, height: pipe.height };
-          const pipeBottomRect = { x: pipe.x, y: pipe.height + 100, width: 50, height: 350 - pipe.height - 100 };
+          const pipeBottomRect = { x: pipe.x, y: pipe.height + pipeGap, width: 50, height: 350 - pipe.height - pipeGap };
           
-          if (
-            (birdRect.x < pipeTopRect.x + pipeTopRect.width &&
-             birdRect.x + birdRect.width > pipeTopRect.x &&
-             birdRect.y < pipeTopRect.y + pipeTopRect.height &&
-             birdRect.y + birdRect.height > pipeTopRect.y) ||
-            (birdRect.x < pipeBottomRect.x + pipeBottomRect.width &&
-             birdRect.x + birdRect.width > pipeBottomRect.x &&
-             birdRect.y < pipeBottomRect.y + pipeBottomRect.height &&
-             birdRect.y + birdRect.height > pipeBottomRect.y)
-          ) {
+          // Check collision with top pipe
+          if (birdRect.x < pipeTopRect.x + pipeTopRect.width &&
+              birdRect.x + birdRect.width > pipeTopRect.x &&
+              birdRect.y < pipeTopRect.y + pipeTopRect.height &&
+              birdRect.y + birdRect.height > pipeTopRect.y) {
             newState.isGameOver = true;
             newState.isGameRunning = false;
+            break;
           }
-        });
-        
-        // Update score
-        newState.pipes.forEach(pipe => {
-          if (pipe.x + 50 < newState.bird.x && pipe.x + 50 >= newState.bird.x - 2) {
+          
+          // Check collision with bottom pipe
+          if (birdRect.x < pipeBottomRect.x + pipeBottomRect.width &&
+              birdRect.x + birdRect.width > pipeBottomRect.x &&
+              birdRect.y < pipeBottomRect.y + pipeBottomRect.height &&
+              birdRect.y + birdRect.height > pipeBottomRect.y) {
+            newState.isGameOver = true;
+            newState.isGameRunning = false;
+            break;
+          }
+          
+          // Score when passing pipe
+          if (!pipe.scored && pipe.x + 50 < newState.bird.x) {
+            pipe.scored = true;
             newState.score += 1;
           }
-        });
+        }
         
         return newState;
       });
     };
 
     const render = () => {
-      // Clear canvas
-      ctx.fillStyle = "#0A0A0F";
+      // Clear canvas with cyberpunk gradient background
+      const gradient = ctx.createLinearGradient(0, 0, 0, 350);
+      gradient.addColorStop(0, "#0A0A0F");
+      gradient.addColorStop(0.5, "#1A0A2E");
+      gradient.addColorStop(1, "#16213E");
+      ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, 400, 350);
       
-      // Draw pipes
-      ctx.fillStyle = "#00F5FF";
+      // Draw pipes with glow effect
       gameState.pipes.forEach(pipe => {
+        const pipeGap = 120;
+        
+        // Pipe glow effect
+        ctx.shadowColor = "#00F5FF";
+        ctx.shadowBlur = 10;
+        
         // Top pipe
+        ctx.fillStyle = "#00F5FF";
         ctx.fillRect(pipe.x, 0, 50, pipe.height);
+        
+        // Top pipe cap
+        ctx.fillStyle = "#0080FF";
+        ctx.fillRect(pipe.x - 5, pipe.height - 20, 60, 20);
+        
         // Bottom pipe
-        ctx.fillRect(pipe.x, pipe.height + 100, 50, 350 - pipe.height - 100);
+        ctx.fillStyle = "#00F5FF";
+        ctx.fillRect(pipe.x, pipe.height + pipeGap, 50, 350 - pipe.height - pipeGap);
+        
+        // Bottom pipe cap
+        ctx.fillStyle = "#0080FF";
+        ctx.fillRect(pipe.x - 5, pipe.height + pipeGap, 60, 20);
+        
+        ctx.shadowBlur = 0;
       });
       
-      // Draw bird
+      // Draw bird with glow effect
+      ctx.shadowColor = "#39FF14";
+      ctx.shadowBlur = 8;
       ctx.fillStyle = "#39FF14";
-      ctx.fillRect(gameState.bird.x, gameState.bird.y, 20, 20);
       
-      // Draw score
+      // Bird body (rounded rectangle)
+      ctx.beginPath();
+      ctx.roundRect(gameState.bird.x, gameState.bird.y, 20, 20, 5);
+      ctx.fill();
+      
+      // Bird eye
+      ctx.fillStyle = "#FFFFFF";
+      ctx.beginPath();
+      ctx.arc(gameState.bird.x + 15, gameState.bird.y + 8, 3, 0, Math.PI * 2);
+      ctx.fill();
+      
+      ctx.shadowBlur = 0;
+      
+      // Draw score with glow
+      ctx.shadowColor = "#00F5FF";
+      ctx.shadowBlur = 5;
       ctx.fillStyle = "#00F5FF";
-      ctx.font = "20px JetBrains Mono";
-      ctx.fillText(`Score: ${gameState.score}`, 10, 30);
+      ctx.font = "bold 20px JetBrains Mono";
+      ctx.fillText(`SCORE: ${gameState.score}`, 10, 30);
+      ctx.shadowBlur = 0;
       
       if (gameState.isGameOver) {
-        ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
+        // Game over overlay
+        ctx.fillStyle = "rgba(0, 0, 0, 0.8)";
         ctx.fillRect(0, 0, 400, 350);
         
+        // Game over text with glow
+        ctx.shadowColor = "#FF0080";
+        ctx.shadowBlur = 10;
         ctx.fillStyle = "#FF0080";
-        ctx.font = "24px Orbitron";
+        ctx.font = "bold 28px Orbitron";
         ctx.textAlign = "center";
-        ctx.fillText("GAME OVER", 200, 150);
+        ctx.fillText("SYSTEM FAILURE", 200, 150);
         
+        ctx.shadowColor = "#00F5FF";
+        ctx.shadowBlur = 5;
         ctx.fillStyle = "#00F5FF";
+        ctx.font = "bold 18px JetBrains Mono";
+        ctx.fillText(`FINAL SCORE: ${gameState.score}`, 200, 180);
+        
+        ctx.fillStyle = "#39FF14";
         ctx.font = "16px JetBrains Mono";
-        ctx.fillText(`Final Score: ${gameState.score}`, 200, 180);
-        ctx.fillText("Press SPACE to restart", 200, 200);
+        ctx.fillText("PRESS [SPACE] TO RESTART", 200, 220);
+        
         ctx.textAlign = "left";
+        ctx.shadowBlur = 0;
       }
     };
 

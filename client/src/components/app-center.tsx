@@ -1,11 +1,13 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { useWindowManager } from "@/hooks/use-window-manager";
 import type { Event } from "@shared/schema";
 
 export default function AppCenter() {
   const { toast } = useToast();
   const queryClient = useQueryClient();
+  const windowManager = useWindowManager();
 
   const { data: events = [], isLoading } = useQuery({
     queryKey: ["/api/events"],
@@ -43,6 +45,24 @@ export default function AppCenter() {
 
   const getEventIcon = (event: Event) => {
     return event.icon || "fas fa-star";
+  };
+
+  const getEventAppType = (eventName: string) => {
+    const appTypes = {
+      "CODEUNDRUM": "codeundrum-app",
+      "HACKADEMIA": "hackademia-app",
+      "CYPHRANEXUS": "cyphranexus-app",
+      "HIGH STAKES": "high-stakes-app",
+      "BREAKING VIRTUAL": "breaking-virtual-app",
+      "GEOMETRY DASH": "geometry-dash-app",
+      "SONARIA": "sonaria-app",
+    };
+    return appTypes[eventName as keyof typeof appTypes] || "codeundrum-app";
+  };
+
+  const launchEventApp = (event: Event) => {
+    const appType = getEventAppType(event.name);
+    windowManager.createWindow(appType as any, `${event.name} - Event Details`);
   };
 
   const getEventColorClass = (color: string) => {
@@ -152,13 +172,21 @@ export default function AppCenter() {
               
               <p className="text-gray-300 text-xs mb-4">{event.description}</p>
               
-              <Button
-                onClick={() => installAppMutation.mutate(event.id)}
-                disabled={installAppMutation.isPending}
-                className={`w-full py-2 rounded-lg transition-all font-semibold text-sm ${getButtonColorClass(event.color)}`}
-              >
-                {installAppMutation.isPending ? "INSTALLING..." : "INSTALL EVENT"}
-              </Button>
+              <div className="flex space-x-2">
+                <Button
+                  onClick={() => launchEventApp(event)}
+                  className={`flex-1 py-2 rounded-lg transition-all font-semibold text-sm bg-cyber-cyan/20 border border-cyber-cyan text-cyber-cyan hover:bg-cyber-cyan hover:text-black`}
+                >
+                  LAUNCH APP
+                </Button>
+                <Button
+                  onClick={() => installAppMutation.mutate(event.id)}
+                  disabled={installAppMutation.isPending}
+                  className={`flex-1 py-2 rounded-lg transition-all font-semibold text-sm ${getButtonColorClass(event.color)}`}
+                >
+                  {installAppMutation.isPending ? "INSTALLING..." : "INSTALL"}
+                </Button>
+              </div>
             </div>
           ))}
         </div>
