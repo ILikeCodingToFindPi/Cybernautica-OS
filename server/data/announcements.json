@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "message": "🔥 HACKADEMIA registrations now open!",
+    "type": "success",
+    "isActive": true
+  },
+  {
+    "id": 2,
+    "message": "🎯 CODEUNDRUM Level 2 starting soon",
+    "type": "info", 
+    "isActive": true
+  },
+  {
+    "id": 3,
+    "message": "🔐 CYPHRANEXUS team formation deadline approaching",
+    "type": "warning",
+    "isActive": true
+  }
+]

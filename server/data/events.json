@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "CODEUNDRUM",
+    "theme": "Competitive Coding",
+    "description": "Competitive Coding Challenge with exception handling and advanced problem solving",
+    "grades": "9-12",
+    "type": "SOLO",
+    "teamSize": "1",
+    "skills": ["Python", "Java", "C", "C++"],
+    "details": {
+      "rounds": ["Level 1: Cornered! – Exception handling", "Level 2: Executed! – Advanced problem solving"],
+      "languages": ["Python", "Java", "C", "C++"]
+    },
+    "color": "cyber-green",
+    "icon": "fas fa-code",
+    "isActive": true
+  },
+  {
+    "id": 2,
+    "name": "HACKADEMIA",
+    "theme": "AI for Education",
+    "description": "Build educational AI tools like chatbot tutors using any programming language",
+    "grades": "9-12",
+    "type": "TEAM",
+    "teamSize": "2-3",
+    "skills": ["AI", "Machine Learning", "Education"],
+    "details": {
+      "goal": "Build educational AI tools (e.g., chatbot tutors)",
+      "tech": "Any language; deploy via GitHub",
+      "focus": "AI solutions for educational purposes"
+    },
+    "color": "cyber-cyan",
+    "icon": "fas fa-robot",
+    "isActive": true
+  }
+]
