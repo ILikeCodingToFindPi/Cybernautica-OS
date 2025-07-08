@@ -116,7 +116,7 @@ export default function Desktop() {
           {/* Event logo backdrop */}
           <div className="absolute inset-0 flex items-center justify-center opacity-15">
             <img 
-              src="/assets/cybernautica-logo.png" 
+              src="/attached_assets/image_1751968479900.png" 
               alt="Cybernautica Logo" 
               className="w-96 h-96 object-contain logo-backdrop"
             />

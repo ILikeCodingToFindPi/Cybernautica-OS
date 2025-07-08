@@ -139,7 +139,7 @@ export default function AppCenter() {
         <div className="flex items-center space-x-4">
           <div className="w-16 h-16 bg-gradient-to-br from-cyber-cyan to-cyber-green rounded-lg flex items-center justify-center">
             <img 
-              src="/assets/cybernautica-logo.png" 
+              src="/attached_assets/image_1751968479900.png" 
               alt="Cybernautica Logo" 
               className="w-10 h-10 object-contain"
             />
@@ -150,7 +150,7 @@ export default function AppCenter() {
           </div>
         </div>
         <img 
-          src="/assets/school-logo.png" 
+          src="/attached_assets/tmp_e69375cb-a5fc-4c7f-a0bb-0b09e42eaaf4_1751968465899.png" 
           alt="School Logo" 
           className="w-12 h-12 object-contain"
         />
