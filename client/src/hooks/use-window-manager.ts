@@ -34,16 +34,22 @@ export function useWindowManager() {
 
   // Save installed apps to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem('cybernautica-installed-apps', JSON.stringify(installedApps));
+    if (installedApps.length > 0) {
+      localStorage.setItem('cybernautica-installed-apps', JSON.stringify(installedApps));
+    }
   }, [installedApps]);
 
   const addInstalledApp = useCallback((app: InstalledApp) => {
     setInstalledApps(prev => {
       // Check if app is already installed
-      if (prev.find(installedApp => installedApp.id === app.id)) {
+      const existing = prev.find(installedApp => installedApp.id === app.id);
+      if (existing) {
+        console.log(`App ${app.name} is already installed`);
         return prev;
       }
-      return [...prev, app];
+      console.log(`Installing app: ${app.name}`);
+      const newApps = [...prev, app];
+      return newApps;
     });
   }, []);
 

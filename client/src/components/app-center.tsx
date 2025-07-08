@@ -25,8 +25,10 @@ export default function AppCenter() {
         body: JSON.stringify({ userId: 1, eventId: event.id }),
       });
       if (!response.ok) throw new Error("Failed to install app");
-      
-      // Add to local installed apps
+      return response.json();
+    },
+    onSuccess: (data, event) => {
+      // Add to local installed apps immediately after successful server response
       windowManager.addInstalledApp({
         id: event.id,
         name: event.name,
@@ -35,9 +37,6 @@ export default function AppCenter() {
         color: event.color
       });
       
-      return response.json();
-    },
-    onSuccess: () => {
       toast({
         title: "App Installed",
         description: "Event has been added to your desktop!",
