@@ -39,7 +39,7 @@ export default function Desktop() {
   };
 
   const openSettings = () => {
-    windowManager.createWindow("settings", "Settings Event Details)");
+    windowManager.createWindow("settings", "Settings (Event Details)");
   };
 
   const renderWindowContent = (window: any) => {
