@@ -133,45 +133,53 @@ export function getFileSystem(): FileSystemNode {
 }
 
 export function getCurrentDirectory(path: string): FileSystemNode | null {
-  const parts = path.split('/').filter(part => part !== '');
-  let current = fileSystem;
-  
+  const parts = path === '~' ? [] : path.split('/').filter(p => p && p !== '~');
+  let current: FileSystemNode | string = fileSystem['~'];
+
   for (const part of parts) {
-    if (part === '~') continue;
-    if (typeof current === 'string') return null;
-    if (!(part in current)) return null;
+    if (typeof current === 'string' || !current[part]) {
+      return null;
+    }
     current = current[part];
   }
-  
-  return current;
+
+  return typeof current === 'object' ? current : null;
 }
 
 export function getFile(currentPath: string, filename: string): string | null {
-  const current = getCurrentDirectory(currentPath);
-  if (!current || typeof current === 'string') return null;
-  
-  const file = current[filename];
-  return typeof file === 'string' ? file : null;
+  const dir = getCurrentDirectory(currentPath);
+  if (!dir || !dir[filename] || typeof dir[filename] !== 'string') {
+    return null;
+  }
+  return dir[filename] as string;
 }
 
 export function changeDirectory(currentPath: string, newPath: string): string | null {
-  // Handle absolute paths
-  if (newPath.startsWith('/')) {
-    const target = getCurrentDirectory(newPath);
-    return target && typeof target !== 'string' ? newPath : null;
+  if (newPath === '~' || newPath === '/') {
+    return '~';
   }
-  
-  // Handle relative paths
+
   if (newPath === '..') {
-    const parts = currentPath.split('/').filter(part => part !== '');
-    if (parts.length <= 1) return '/~';
+    if (currentPath === '~') {
+      return '~'; // Can't go above home
+    }
+    const parts = currentPath.split('/').filter(p => p);
+    if (parts.length <= 1) {
+      return '~';
+    }
     parts.pop();
-    return '/' + parts.join('/');
+    return parts.length === 0 ? '~' : '/' + parts.join('/');
   }
-  
-  if (newPath === '.') return currentPath;
-  
-  const targetPath = currentPath === '/~' ? `/~/${newPath}` : `${currentPath}/${newPath}`;
-  const target = getCurrentDirectory(targetPath);
-  return target && typeof target !== 'string' ? targetPath : null;
+
+  // Handle relative path
+  let targetPath = currentPath;
+  if (currentPath === '~') {
+    targetPath = '/' + newPath;
+  } else {
+    targetPath = currentPath + '/' + newPath;
+  }
+
+  // Check if directory exists
+  const dir = getCurrentDirectory(targetPath);
+  return dir ? targetPath : null;
 }
