@@ -7,6 +7,11 @@ import AppCenter from "@/components/app-center";
 import Settings from "@/components/settings";
 import CodeundrumApp from "@/components/events/codeundrum-app";
 import HackademiaApp from "@/components/events/hackademia-app";
+import CyphranexusApp from "@/components/events/cyphranexus-app";
+import HighStakesApp from "@/components/events/high-stakes-app";
+import BreakingVirtualApp from "@/components/events/breaking-virtual-app";
+import GeometryDashApp from "@/components/events/geometry-dash-app";
+import SonariaApp from "@/components/events/sonaria-app";
 
 export default function Desktop() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -54,6 +59,16 @@ export default function Desktop() {
         return <CodeundrumApp />;
       case "hackademia-app":
         return <HackademiaApp />;
+      case "cyphranexus-app":
+        return <CyphranexusApp />;
+      case "high-stakes-app":
+        return <HighStakesApp />;
+      case "breaking-virtual-app":
+        return <BreakingVirtualApp />;
+      case "geometry-dash-app":
+        return <GeometryDashApp />;
+      case "sonaria-app":
+        return <SonariaApp />;
       case "file-manager":
         return (
           <div className="p-4 text-center">
@@ -74,13 +89,13 @@ export default function Desktop() {
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-3">
             <img 
-              src="/assets/cybernautica-logo.png" 
+              src="/attached_assets/image_1751968479900.png" 
               alt="Cybernautica Logo" 
               className="w-8 h-8 object-contain logo-header"
             />
             <div className="text-cyber-cyan font-display font-bold">CYBERNAUTICA</div>
             <img 
-              src="/assets/school-logo.png" 
+              src="/attached_assets/tmp_e69375cb-a5fc-4c7f-a0bb-0b09e42eaaf4_1751968465899.png" 
               alt="School Logo" 
               className="w-8 h-8 object-contain logo-header"
             />
@@ -171,9 +186,11 @@ export default function Desktop() {
 
           {/* Cybernautica logo watermark */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="text-9xl font-display font-bold text-cyber-cyan opacity-5 select-none">
-              CYBERNAUTICA
-            </div>
+            <img 
+              src="/attached_assets/image_1751968479900.png" 
+              alt="Cybernautica Logo" 
+              className="w-80 h-80 object-contain opacity-10 select-none"
+            />
           </div>
 
           {/* Floating elements */}

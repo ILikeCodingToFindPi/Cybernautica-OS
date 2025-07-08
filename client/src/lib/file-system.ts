@@ -11,12 +11,27 @@ const fileSystem: FileSystemNode = {
 Theme: AI for Education
 Grades: 9-12
 Type: Team (2-3 members)
+Prize: $8,000
 
 Goal: Build educational AI tools like chatbot tutors
 Tech Stack: Any programming language
 Deployment: via GitHub
 
 This event challenges students to create innovative AI solutions for educational purposes. Teams will develop AI-powered tools that can assist in learning, such as intelligent tutoring systems, automated grading systems, or personalized learning assistants.
+
+Key Features:
+- AI-powered chatbot tutors
+- Automated grading systems
+- Personalized learning assistants
+- Educational content recommendation systems
+- Study schedule optimization tools
+
+Judging Criteria:
+- Innovation and creativity
+- Technical implementation
+- Educational impact
+- User experience
+- Scalability
 
 Registration: Open now!
 Deadline: July 18, 2025
@@ -27,6 +42,7 @@ Contact: events@npshsr.com`,
 Theme: Competitive Coding
 Grades: 9-12
 Type: Solo
+Prize: $10,000
 
 Rounds:
 Level 1: Cornered! - Exception handling challenges
@@ -36,26 +52,234 @@ Supported Languages: Python, Java, C, C++
 
 This is the ultimate competitive programming challenge where individual participants face increasingly difficult algorithmic problems. The first round focuses on robust error handling and edge cases, while the second round tests advanced algorithmic thinking and optimization skills.
 
+Challenge Types:
+- Data structures and algorithms
+- Dynamic programming
+- Graph theory
+- String manipulation
+- Mathematical problems
+- Time and space complexity optimization
+
+Skills Required:
+- Strong problem-solving abilities
+- Algorithmic thinking
+- Code optimization
+- Debugging skills
+- Time management
+
 Registration: Now Open
 Format: Online Judge System
-Duration: 3 hours per round`,
+Duration: 3 hours per round
+Platform: HackerRank/CodeChef style interface`,
 
         'Cyphranexus.txt': `CYPHRANEXUS Event Information
 
 Theme: Cryptography and Puzzle Solving
 Grades: 9-12
 Type: Team (2 members, must include 1 Grade 12 student)
+Prize: $7,000
 
 Skills Required:
 - Book ciphers and classical cryptography
 - Trail-following and clue interpretation
 - Mathematical puzzle solving
+- Pattern recognition
+- Historical cipher knowledge
+
+Challenge Types:
+- Caesar and Substitution ciphers
+- Beale Cipher-based riddles
+- Steganography challenges
+- Hash function puzzles
+- Digital signature verification
+- Modern cryptographic protocols
 
 Example Challenge: Beale Cipher-based riddles
 Teams will navigate through a series of interconnected cryptographic puzzles, each revealing clues to the next challenge. This event combines historical ciphers with modern cryptographic concepts.
 
+Equipment Needed:
+- Calculators
+- Reference materials
+- Notebooks for working
+- Basic programming knowledge helpful
+
 Team Formation Deadline: 11 July 2025
 Event Date: July 18, 2025`,
+
+        'HighStakes.txt': `HIGH STAKES Event Information
+
+Theme: Strategy Card Games
+Grades: 10-12
+Type: Solo
+Prize: $5,000
+
+Game Types:
+- Poker variants
+- Blackjack strategy
+- Custom card games
+- Probability-based challenges
+
+Skills Required:
+- Mathematical probability
+- Risk assessment
+- Strategic thinking
+- Decision making under pressure
+- Bluffing and psychology
+
+Challenge Structure:
+- Multiple rounds of different card games
+- Elimination-style tournament
+- Final table with top performers
+- Real-time strategy adjustments
+
+Judging Criteria:
+- Consistency across games
+- Strategic decision making
+- Adaptability to new game rules
+- Mathematical accuracy
+- Risk management
+
+Registration: Open
+Format: Tournament style
+Duration: 4 hours
+No prior card game experience required - rules will be explained`,
+
+        'BreakingVirtual.txt': `BREAKING VIRTUAL Event Information
+
+Theme: VR + Real-world Puzzles
+Grades: 9-12
+Type: Team (4 members)
+Prize: $9,000
+
+Challenge Components:
+- Virtual Reality escape rooms
+- Physical puzzle solving
+- Mixed reality challenges
+- Collaborative problem solving
+
+Skills Required:
+- Spatial reasoning
+- Teamwork and communication
+- Adaptability to VR environments
+- Logical thinking
+- Physical dexterity
+
+Equipment Provided:
+- VR headsets and controllers
+- Physical puzzle components
+- Mixed reality interfaces
+- Collaboration tools
+
+Challenge Types:
+- 3D maze navigation
+- Object manipulation in VR
+- Pattern recognition across realities
+- Time-based challenges
+- Coordination between virtual and physical spaces
+
+Team Roles:
+- VR Navigator
+- Physical Puzzle Solver
+- Coordinator/Communication
+- Strategy/Analysis
+
+Registration: Open
+Format: Progressive challenges
+Duration: 3 hours
+Team formation deadline: July 11, 2025`,
+
+        'GeometryDash.txt': `GEOMETRY DASH Event Information
+
+Theme: Robotics & Arduino
+Grades: 9-12
+Type: Team (3 members)
+Prize: $8,500
+
+Challenge: Build and program robots to navigate obstacle courses
+
+Skills Required:
+- Arduino programming
+- Sensor integration
+- Mechanical design
+- Problem-solving
+- Electronics knowledge
+
+Components Provided:
+- Arduino boards
+- Sensors (ultrasonic, light, touch)
+- Motors and servos
+- Structural materials
+- Basic tools
+
+Challenge Types:
+- Line following
+- Obstacle avoidance
+- Object pickup and placement
+- Maze navigation
+- Speed challenges
+
+Programming Languages:
+- C++ (Arduino IDE)
+- Python (for advanced features)
+- Block-based programming available
+
+Team Roles:
+- Programmer
+- Hardware Designer
+- Strategist/Tester
+
+Registration: Open
+Format: Build and compete
+Duration: 5 hours
+Materials provided, but teams can bring additional components`,
+
+        'Sonaria.txt': `SONARIA Event Information
+
+Theme: Tech Music & Visual Art
+Grades: 9-12
+Type: Team (6-8 members)
+Prize: $6,000
+
+Challenge: Create multimedia performances combining technology, music, and visual art
+
+Skills Required:
+- Music production
+- Visual arts/animation
+- Programming (optional)
+- Creative collaboration
+- Performance skills
+
+Categories:
+- Digital music composition
+- Visual art creation
+- Interactive installations
+- Live performance
+- Technology integration
+
+Tools Available:
+- Digital Audio Workstations
+- Graphics/Animation software
+- Projection equipment
+- Sound systems
+- Programming environments
+
+Judging Criteria:
+- Creativity and originality
+- Technical execution
+- Artistic merit
+- Collaboration quality
+- Audience engagement
+
+Team Composition:
+- Musicians/Composers
+- Visual Artists
+- Technical/Programming support
+- Performance coordinators
+
+Registration: Open
+Format: Create and perform
+Duration: 6 hours
+Final performances in the evening`,
 
         'Events_List.txt': `CYBERNAUTICA 2024 Events Overview
 

@@ -67,14 +67,6 @@ export default function BootScreen({ onComplete }: BootScreenProps) {
           ))}
         </div>
         <div className="mt-8">
-          <div className="flex items-center justify-center mb-6">
-            <img 
-              src="/attached_assets/image_1751968479900.png" 
-              alt="Cybernautica Logo" 
-              className="w-16 h-16 object-contain animate-spin"
-              style={{ animationDuration: '8s' }}
-            />
-          </div>
           <div className="text-2xl font-display neon-text text-cyber-cyan">
             <div>╔═══════════════════════════════════════╗</div>
             <div>║        CYBERNAUTICA OS v2.1.0        ║</div>
