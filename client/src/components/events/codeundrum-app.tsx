@@ -20,9 +20,9 @@ export default function CodeundrumApp() {
             <div className="space-y-3 text-sm">
               <div><span className="text-cyber-green font-semibold">Theme:</span> Competitive Coding</div>
               <div><span className="text-cyber-green font-semibold">Grades:</span> 9-12</div>
-              <div><span className="text-cyber-green font-semibold">Type:</span> Solo</div>
-              <div><span className="text-cyber-green font-semibold">Prize:</span> $10,000</div>
-              <div><span className="text-cyber-green font-semibold">Duration:</span> 6 hours total</div>
+              <div><span className="text-cyber-green font-semibold">Type:</span> Solo Event</div>
+              <div><span className="text-cyber-green font-semibold">Team Size:</span> 2 participants per school</div>
+              <div><span className="text-cyber-green font-semibold">Equipment:</span> Computer systems provided</div>
             </div>
           </div>
 
@@ -31,11 +31,11 @@ export default function CodeundrumApp() {
             <div className="space-y-3 text-sm">
               <div className="border-l-4 border-cyber-green pl-4">
                 <div className="font-semibold text-cyber-green">Level 1: Cornered!</div>
-                <div className="text-gray-400">Exception handling challenges</div>
+                <div className="text-gray-400">Testing exception and error handling</div>
               </div>
               <div className="border-l-4 border-cyber-cyan pl-4">
                 <div className="font-semibold text-cyber-cyan">Level 2: Executed!</div>
-                <div className="text-gray-400">Advanced problem solving</div>
+                <div className="text-gray-400">Write codes based on problem statements at an advanced level from scratch</div>
               </div>
             </div>
           </div>
@@ -55,57 +55,45 @@ export default function CodeundrumApp() {
 
         {/* Challenge Description */}
         <div className="cyber-glass rounded-lg p-6 mb-8">
-          <h3 className="text-xl font-bold text-cyber-cyan mb-4">Challenge Details</h3>
+          <h3 className="text-xl font-bold text-cyber-cyan mb-4">What is CODEUNDRUM?</h3>
           <div className="text-gray-300 space-y-4">
             <p>
-              This is the ultimate competitive programming challenge where individual participants face 
-              increasingly difficult algorithmic problems. The first round focuses on robust error 
-              handling and edge cases, while the second round tests advanced algorithmic thinking and 
-              optimization skills.
+              Codeundrum is an exciting, individual, competitive coding competition designed to challenge students' programming skills. 
+              This event is crafted to explore several facets of a coder's abilities - a true "code conundrum".
             </p>
 
             <div className="mt-6">
-              <h4 className="text-lg font-semibold text-cyber-green mb-3">Challenge Types</h4>
+              <h4 className="text-lg font-semibold text-cyber-green mb-3">Prerequisites</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center space-x-2">
                     <i className="fas fa-code text-cyber-cyan"></i>
-                    <span>Data structures and algorithms</span>
+                    <span>Fundamental to intermediate level programming concepts</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <i className="fas fa-code text-cyber-cyan"></i>
-                    <span>Dynamic programming</span>
+                    <span>At least one programming language (Python, Java, C or C++)</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <i className="fas fa-code text-cyber-cyan"></i>
-                    <span>Graph theory</span>
-                  </li>
-                </ul>
-                <ul className="space-y-2 text-sm">
-                  <li className="flex items-center space-x-2">
-                    <i className="fas fa-code text-cyber-cyan"></i>
-                    <span>String manipulation</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <i className="fas fa-code text-cyber-cyan"></i>
-                    <span>Mathematical problems</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <i className="fas fa-code text-cyber-cyan"></i>
-                    <span>Time and space complexity optimization</span>
+                    <span>Error handling knowledge</span>
                   </li>
                 </ul>
               </div>
             </div>
 
             <div className="mt-6">
-              <h4 className="text-lg font-semibold text-cyber-green mb-3">Skills Required</h4>
-              <div className="flex flex-wrap gap-2">
-                {["Strong problem-solving abilities", "Algorithmic thinking", "Code optimization", "Debugging skills", "Time management"].map((skill) => (
-                  <span key={skill} className="px-2 py-1 bg-cyber-cyan/20 text-cyber-cyan rounded text-xs">
-                    {skill}
-                  </span>
-                ))}
+              <h4 className="text-lg font-semibold text-cyber-green mb-3">Event Head</h4>
+              <div className="bg-cyber-dark/30 rounded-lg p-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-cyber-green/20 rounded-full flex items-center justify-center">
+                    <i className="fas fa-user text-cyber-green"></i>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-cyber-green">Netra Karthigeyan</div>
+                    <div className="text-sm text-gray-400">netrakarthigeyan@gmail.com</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

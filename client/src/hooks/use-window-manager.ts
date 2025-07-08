@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 
 export interface Window {
   id: string;
-  type: "terminal" | "arcade" | "app-center" | "file-manager" | "settings" | "codeundrum-app" | "hackademia-app" | "cyphranexus-app" | "high-stakes-app" | "breaking-virtual-app" | "geometry-dash-app" | "sonaria-app";
+  type: "terminal" | "app-center" | "file-manager" | "settings" | "codeundrum-app" | "hackademia-app" | "cyphranexus-app" | "high-stakes-app" | "breaking-virtual-app" | "geometry-dash-app" | "sonaria-app";
   title: string;
   position: { x: number; y: number };
   size: { width: number; height: number };

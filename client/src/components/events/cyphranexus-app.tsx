@@ -22,8 +22,8 @@ export default function CyphranexusApp() {
               <div><span className="text-cyber-pink font-semibold">Theme:</span> Cryptography and Puzzle Solving</div>
               <div><span className="text-cyber-pink font-semibold">Grades:</span> 9-12</div>
               <div><span className="text-cyber-pink font-semibold">Type:</span> Team (2 members, must include 1 Grade 12 student)</div>
-              <div><span className="text-cyber-pink font-semibold">Prize:</span> $7,000</div>
-              <div><span className="text-cyber-pink font-semibold">Team Formation Deadline:</span> 11 July 2025</div>
+              <div><span className="text-cyber-pink font-semibold">Registration Limit:</span> 8 teams in total; first-come, first-serve basis</div>
+              <div><span className="text-cyber-pink font-semibold">Prerequisites:</span> Basic idea of a Book Cipher (Example: Beale Ciphers)</div>
               <div><span className="text-cyber-pink font-semibold">Event Date:</span> July 18, 2025</div>
             </div>
           </div>
@@ -84,42 +84,45 @@ export default function CyphranexusApp() {
           </div>
         </div>
 
-        {/* Example Challenge */}
+        {/* What is CYPHRANEXUS */}
         <div className="cyber-glass rounded-lg p-6 mb-8">
-          <h3 className="text-xl font-bold text-cyber-cyan mb-4">Example Challenge</h3>
+          <h3 className="text-xl font-bold text-cyber-cyan mb-4">What is CYPHRANEXUS?</h3>
           <div className="bg-cyber-pink/10 border border-cyber-pink/30 rounded-lg p-4">
-            <h4 className="font-semibold text-cyber-pink mb-2">Beale Cipher-based riddles</h4>
+            <h4 className="font-semibold text-cyber-pink mb-2">Find the Key, Follow the Trail, Decipher!</h4>
             <p className="text-gray-300 text-sm">
-              Teams will navigate through a series of interconnected cryptographic puzzles, each revealing 
-              clues to the next challenge. This event combines historical ciphers with modern cryptographic concepts.
+              Be ready to engage in mind-bending puzzles and to perceive meaningful connections between seemingly unrelated things. 
+              Participants will use their expertise in technology and their problem-solving abilities to decrypt a powerful message, 
+              all while racing against the clock. Are you up for the challenge?
             </p>
           </div>
         </div>
 
-        {/* Equipment Needed */}
+        {/* Event Heads */}
         <div className="cyber-glass rounded-lg p-6">
-          <h3 className="text-xl font-bold text-cyber-cyan mb-4">Equipment Needed</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-center space-x-2">
-                <i className="fas fa-calculator text-cyber-pink"></i>
-                <span>Calculators</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <i className="fas fa-book text-cyber-pink"></i>
-                <span>Reference materials</span>
-              </li>
-            </ul>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-center space-x-2">
-                <i className="fas fa-sticky-note text-cyber-pink"></i>
-                <span>Notebooks for working</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <i className="fas fa-code text-cyber-pink"></i>
-                <span>Basic programming knowledge helpful</span>
-              </li>
-            </ul>
+          <h3 className="text-xl font-bold text-cyber-cyan mb-4">Event Heads</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="bg-cyber-dark/30 rounded-lg p-4">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-cyber-pink/20 rounded-full flex items-center justify-center">
+                  <i className="fas fa-user text-cyber-pink"></i>
+                </div>
+                <div>
+                  <div className="font-semibold text-cyber-pink">Aditya Kathait</div>
+                  <div className="text-sm text-gray-400">kathaitaditya12@gmail.com</div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-cyber-dark/30 rounded-lg p-4">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-cyber-pink/20 rounded-full flex items-center justify-center">
+                  <i className="fas fa-user text-cyber-pink"></i>
+                </div>
+                <div>
+                  <div className="font-semibold text-cyber-pink">Riya Shivram</div>
+                  <div className="text-sm text-gray-400">riya.shivram@gmail.com</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -108,6 +108,15 @@ Comprehensive component library including:
 ```
 Changelog:
 - July 01, 2025. Initial setup
+- July 08, 2025. Major content and design update:
+  - Replaced all placeholder logos with new Cybernautica and school logos
+  - Updated Cybernautica logo as desktop background
+  - Updated color scheme to match logo (pink/cyan/green theme)
+  - Removed arcade functionality completely
+  - Updated all event details with actual brochure information
+  - Added comprehensive event apps with real content for all 7 events
+  - Updated announcements with actual event dates and information
+  - Added event head contact information for all events
 ```
 
 ## User Preferences

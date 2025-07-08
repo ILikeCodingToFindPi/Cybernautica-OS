@@ -21,12 +21,12 @@ export default function Settings() {
           </div>
           <div className="flex items-center space-x-3">
             <img 
-              src="/assets/school-logo.png" 
+              src="/attached_assets/image_1751974288082.png" 
               alt="School Logo" 
               className="w-12 h-12 object-contain"
             />
             <img 
-              src="/assets/cybernautica-logo.png" 
+              src="/attached_assets/tmp_e69375cb-a5fc-4c7f-a0bb-0b09e42eaaf4_1751974263538.png" 
               alt="Cybernautica Logo" 
               className="w-12 h-12 object-contain"
             />

@@ -25,7 +25,7 @@ export default function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
         <div className="text-center mb-8">
           <div className="flex items-center justify-center space-x-4 mb-4">
             <img 
-              src="/attached_assets/image_1751968479900.png" 
+              src="/attached_assets/tmp_e69375cb-a5fc-4c7f-a0bb-0b09e42eaaf4_1751974263538.png" 
               alt="Cybernautica Logo" 
               className="w-12 h-12 object-contain"
             />
@@ -33,7 +33,7 @@ export default function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
               CYBERNAUTICA
             </h1>
             <img 
-              src="/attached_assets/tmp_e69375cb-a5fc-4c7f-a0bb-0b09e42eaaf4_1751968465899.png" 
+              src="/attached_assets/image_1751974288082.png" 
               alt="School Logo" 
               className="w-12 h-12 object-contain"
             />

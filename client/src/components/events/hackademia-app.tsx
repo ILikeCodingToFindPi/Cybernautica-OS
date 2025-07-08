@@ -20,19 +20,22 @@ export default function HackademiaApp() {
             <div className="space-y-3 text-sm">
               <div><span className="text-cyber-cyan font-semibold">Theme:</span> AI for Education</div>
               <div><span className="text-cyber-cyan font-semibold">Grades:</span> 9-12</div>
-              <div><span className="text-cyber-cyan font-semibold">Type:</span> Team (2-3 members)</div>
-              <div><span className="text-cyber-cyan font-semibold">Prize:</span> $8,000</div>
-              <div><span className="text-cyber-cyan font-semibold">Tech Stack:</span> Any programming language</div>
-              <div><span className="text-cyber-cyan font-semibold">Deployment:</span> via GitHub</div>
+              <div><span className="text-cyber-cyan font-semibold">Type:</span> Team Event (2-3 members per team)</div>
+              <div><span className="text-cyber-cyan font-semibold">Equipment:</span> Bring your own laptops; Wi-Fi will be provided</div>
+              <div><span className="text-cyber-cyan font-semibold">Tech Stack:</span> Any programming language (Python, Javascript etc)</div>
+              <div><span className="text-cyber-cyan font-semibold">Deployment:</span> GitHub deployment required</div>
             </div>
           </div>
 
           <div className="cyber-glass rounded-lg p-6">
-            <h3 className="text-xl font-bold text-cyber-cyan mb-4">Goal</h3>
+            <h3 className="text-xl font-bold text-cyber-cyan mb-4">What is HACKADEMIA?</h3>
             <p className="text-gray-300 text-sm">
-              Build educational AI tools like chatbot tutors. This event challenges students to create 
-              innovative AI solutions for educational purposes.
+              In this electrifying race against time, teams will design AI-powered tools that reimagine how students learn, revise, 
+              and understand school subjects. Think chatbots that explain calculus, physics or chemistry-if it teaches, it counts!
             </p>
+            <div className="mt-4 text-sm">
+              <div><span className="text-cyber-cyan font-semibold">Special Note:</span> Subject drop happens 1 day before the hackathon</div>
+            </div>
           </div>
         </div>
 
@@ -106,13 +109,45 @@ export default function HackademiaApp() {
           </div>
         </div>
 
-        {/* Registration Info */}
+        {/* Event Heads */}
         <div className="cyber-glass rounded-lg p-6">
-          <h3 className="text-xl font-bold text-cyber-cyan mb-4">Registration Information</h3>
-          <div className="space-y-3 text-sm">
-            <div><span className="text-cyber-cyan font-semibold">Registration:</span> Open now!</div>
-            <div><span className="text-cyber-cyan font-semibold">Deadline:</span> July 18, 2025</div>
-            <div><span className="text-cyber-cyan font-semibold">Contact:</span> events@npshsr.com</div>
+          <h3 className="text-xl font-bold text-cyber-cyan mb-4">Event Heads</h3>
+          <div className="space-y-3">
+            <div className="bg-cyber-dark/30 rounded-lg p-4">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-cyber-cyan/20 rounded-full flex items-center justify-center">
+                  <i className="fas fa-user text-cyber-cyan"></i>
+                </div>
+                <div>
+                  <div className="font-semibold text-cyber-cyan">Pranjal Jain</div>
+                  <div className="text-sm text-gray-400">4pranjaljain@gmail.com</div>
+                </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="bg-cyber-dark/30 rounded-lg p-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-cyber-cyan/20 rounded-full flex items-center justify-center">
+                    <i className="fas fa-user text-cyber-cyan"></i>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-cyber-cyan">Deeptarka Dey</div>
+                    <div className="text-sm text-gray-400">deeptarkadey29@gmail.com</div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-cyber-dark/30 rounded-lg p-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-cyber-cyan/20 rounded-full flex items-center justify-center">
+                    <i className="fas fa-user text-cyber-cyan"></i>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-cyber-cyan">Vishnu Srigiriraju</div>
+                    <div className="text-sm text-gray-400">vishnu.srigiriraju@gmail.com</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

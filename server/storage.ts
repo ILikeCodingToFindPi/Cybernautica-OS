@@ -51,14 +51,18 @@ export class MemStorage implements IStorage {
       {
         name: "CODEUNDRUM",
         theme: "Competitive Coding",
-        description: "Competitive Coding Challenge with exception handling and advanced problem solving",
+        description: "An exciting, individual, competitive coding competition designed to challenge students' programming skills through multiple levels of testing.",
         grades: "9-12",
         type: "SOLO",
-        teamSize: "1",
-        skills: ["Python", "Java", "C", "C++"],
+        teamSize: "2 participants per school",
+        skills: ["Python", "Java", "C", "C++", "Error handling"],
         details: {
-          rounds: ["Level 1: Cornered! – Exception handling", "Level 2: Executed! – Advanced problem solving"],
-          languages: ["Python", "Java", "C", "C++"]
+          rounds: ["Level 1: Cornered! - Testing exception and error handling", "Level 2: Executed! - Write codes based on problem statements at an advanced level from scratch"],
+          languages: ["Python", "Java", "C", "C++"],
+          equipment: "Participants will be provided with computer systems",
+          eventHeads: [
+            { name: "Netra Karthigeyan", email: "netrakarthigeyan@gmail.com" }
+          ]
         },
         color: "cyber-green",
         icon: "fas fa-code",
@@ -67,15 +71,22 @@ export class MemStorage implements IStorage {
       {
         name: "HACKADEMIA",
         theme: "AI for Education",
-        description: "Build educational AI tools like chatbot tutors using any programming language",
+        description: "In this electrifying race against time, teams will design AI-powered tools that reimagine how students learn, revise, and understand school subjects. Think chatbots that explain calculus, physics or chemistry-if it teaches, it counts!",
         grades: "9-12",
         type: "TEAM",
-        teamSize: "2-3",
-        skills: ["AI", "Machine Learning", "Education"],
+        teamSize: "2-3 members per team",
+        skills: ["Python", "Javascript", "AI", "Education", "Problem-solving"],
         details: {
-          goal: "Build educational AI tools (e.g., chatbot tutors)",
-          tech: "Any language; deploy via GitHub",
-          focus: "AI solutions for educational purposes"
+          goal: "Design AI-powered tools that reimagine how students learn, revise, and understand school subjects",
+          tech: "Any programming language (Python, Javascript etc), GitHub deployment",
+          focus: "AI solutions for educational purposes",
+          equipment: "Bring your own laptops; Wi-Fi will be provided",
+          subjectDrop: "Subject drop happens 1 day before the hackathon",
+          eventHeads: [
+            { name: "Pranjal Jain", email: "4pranjaljain@gmail.com" },
+            { name: "Deeptarka Dey", email: "deeptarkadey29@gmail.com" },
+            { name: "Vishnu Srigiriraju", email: "vishnu.srigiriraju@gmail.com" }
+          ]
         },
         color: "cyber-cyan",
         icon: "fas fa-robot",
@@ -84,14 +95,19 @@ export class MemStorage implements IStorage {
       {
         name: "CYPHRANEXUS",
         theme: "Cryptography and Puzzle Solving",
-        description: "Cryptography challenges including book ciphers and trail-following puzzles",
+        description: "Find the Key, Follow the Trail, Decipher! Be ready to engage in mind-bending puzzles and to perceive meaningful connections between seemingly unrelated things. Participants will use their expertise in technology and their problem-solving abilities to decrypt a powerful message, all while racing against the clock.",
         grades: "9-12",
         type: "TEAM",
-        teamSize: "2 (must include Grade 12)",
-        skills: ["Cryptography", "Book ciphers", "Trail-following"],
+        teamSize: "2 members per team",
+        skills: ["Cryptography", "Book ciphers", "Problem-solving", "Technology"],
         details: {
-          example: "Beale Cipher-based riddles",
-          requirements: "Must include one Grade 12 student"
+          example: "Basic idea of a Book Cipher. Example: Beale Ciphers",
+          requirements: "Must include one student from Grade 12",
+          registrationLimit: "8 teams in total; first-come, first-serve basis",
+          eventHeads: [
+            { name: "Aditya Kathait", email: "kathaitaditya12@gmail.com" },
+            { name: "Riya Shivram", email: "riya.shivram@gmail.com" }
+          ]
         },
         color: "cyber-pink",
         icon: "fas fa-lock",
@@ -100,14 +116,21 @@ export class MemStorage implements IStorage {
       {
         name: "HIGH STAKES",
         theme: "Card-based Strategy Games",
-        description: "Strategic prediction and risk-reward games with leaderboard elimination",
+        description: "Step into the exhilarating world of High Stakes! A thrilling multi-round strategy-based event that blends timeless classics with smart risk-taking. Participants will battle it out through various card related chance games. With credits at stake and eliminations at every turn, only the sharpest minds will survive till the end.",
         grades: "10-12",
         type: "SOLO",
-        teamSize: "1",
-        skills: ["Strategy", "Risk Assessment", "Prediction"],
+        teamSize: "2 participants per school (individual participation)",
+        skills: ["Strategy", "Risk Assessment", "Prediction", "Java", "Python"],
         details: {
-          focus: "Strategic prediction, risk-reward games",
-          bonus: "Leaderboard influences elimination"
+          focus: "Multi-round strategy-based event with card games",
+          bonus: "The leaderboard is your lifeline-stay on top or get knocked out!",
+          equipment: "Event will be conducted at the school computer lab",
+          registrationLimit: "7 teams in total; first-come, first-serve basis",
+          eventHeads: [
+            { name: "Anshuman Kesavan", email: "anshuman.s.kesavan@gmail.com" },
+            { name: "Tejaas Muthukumar", email: "tejaas08@gmail.com" },
+            { name: "Goutham Ramanathan", email: "gouthamramanathan1234@gmail.com" }
+          ]
         },
         color: "purple-500",
         icon: "fas fa-diamond",
@@ -115,14 +138,22 @@ export class MemStorage implements IStorage {
       },
       {
         name: "BREAKING VIRTUAL",
-        theme: "Real-world + Virtual Puzzle",
-        description: "Multi-phase challenge combining USB clues, VR shooting, and computer puzzles",
+        theme: "Mystery Game with Tech Twist",
+        description: "A mystery game with a tech twist! You'll start by digging through clues hidden on USB drives and inside a computer to figure out a secret code. Then, you'll jump into a virtual world where one teammate (blindfolded!) has to shoot the right targets-while the rest of you guide them with your voice. Finally, your team will battle it out using computers and real-world games to beat the final stage.",
         grades: "9-12",
         type: "TEAM",
-        teamSize: "4",
-        skills: ["Command line", "Logic", "Coordination", "VR"],
+        teamSize: "4 members per team",
+        skills: ["Command line", "Logic", "Coordination", "Communication", "Computer knowledge"],
         details: {
-          phases: ["USB clue solving", "Blindfolded VR target shooting", "Final computer puzzle battle"]
+          phases: ["USB clue solving", "Virtual world with blindfolded teammate shooting targets", "Final computer and real-world game battle"],
+          equipment: "Usage of any devices except those given by organisers is not permitted",
+          eventHeads: [
+            { name: "Srijon Sarkar", email: "srijons023@gmail.com" },
+            { name: "Gautham Karthik", email: "gautham797@gmail.com" },
+            { name: "Pranav Karthikeyan", email: "pranav24ss64@gmail.com" },
+            { name: "Anush Rao", email: "anushrao07@gmail.com" },
+            { name: "Akshar Damodar", email: "akshardamodar47@gmail.com" }
+          ]
         },
         color: "red-500",
         icon: "fas fa-vr-cardboard",
@@ -130,15 +161,21 @@ export class MemStorage implements IStorage {
       },
       {
         name: "GEOMETRY DASH",
-        theme: "Robotics + Geometry",
-        description: "Program a line-tracing Arduino rover judged on speed, accuracy, and code efficiency",
+        theme: "Arduino Programming & Robotics",
+        description: "Geometry Dash challenges each team to transform pure Python logic into flawless motion. In a ten-minute coding sprint, participants will program an Arduino line-tracing rover to replicate intricate geometric figures with speed and precision. External references are prohibited; only algorithmic insight decides the outcome as judges score path fidelity, execution time, and efficiency.",
         grades: "9-12",
         type: "TEAM",
-        teamSize: "3",
-        skills: ["Arduino", "Robotics", "Programming", "Geometry"],
+        teamSize: "3 members per team",
+        skills: ["Python", "Arduino", "Robotics", "Programming", "Geometry"],
         details: {
-          task: "Program a line-tracing Arduino rover",
-          judging: "Speed, accuracy, code efficiency"
+          task: "Program an Arduino line-tracing rover to replicate intricate geometric figures",
+          judging: "Path fidelity, execution time, and efficiency",
+          timeLimit: "Ten-minute coding sprint",
+          equipment: "Additional hardware for building the bot, or uploading the code is not required",
+          eventHeads: [
+            { name: "Arjun Sinha", email: "arjun@iqlect.com" },
+            { name: "Nihaar S", email: "nihaars@hotmail.com" }
+          ]
         },
         color: "yellow-500",
         icon: "fas fa-microchip",
@@ -147,14 +184,21 @@ export class MemStorage implements IStorage {
       {
         name: "SONARIA",
         theme: "Tech-Themed Music + Visual Art",
-        description: "Tech-themed music and visual art with poster design and parody song performance",
+        description: "Sonaria is a unique and electrifying event that fuses the worlds of technology, music, and design. Participants must bring both cyber knowledge and musical flair to the stage. Each team is split into two groups: one group crafts a clever parody of a popular song, using cyber topics ranging from cybersecurity to technology. The other group must transform the song into a visually striking poster.",
         grades: "9-12",
         type: "TEAM",
-        teamSize: "6-8",
-        skills: ["Music", "Art", "Design", "Performance"],
+        teamSize: "6-8 members per team",
+        skills: ["Music", "Art", "Design", "Performance", "Cyber safety", "Technology"],
         details: {
-          roles: "2 do poster design, remaining perform parody song",
-          examples: "Sing about phishing, cyber safety"
+          roles: "2 members for graphic design and the rest in singing",
+          examples: "From firewalls to phishing, from coding to hacking, Sonaria is where the digital meets the dramatic",
+          requirements: "Proficient in vocals (backing track will be provided)",
+          registrationLimit: "8 teams in total; first-come, first-serve basis",
+          eventHeads: [
+            { name: "Nishka Rao", email: "nishkarao01@gmail.com" },
+            { name: "Nimisha Srivastava", email: "nimishasrivastava220@gmail.com" },
+            { name: "Sumaira Shantanu", email: "sumaira.shantanu@gmail.com" }
+          ]
         },
         color: "indigo-500",
         icon: "fas fa-music",
@@ -167,18 +211,23 @@ export class MemStorage implements IStorage {
     // Create default announcements
     const defaultAnnouncements: InsertAnnouncement[] = [
       {
-        message: "🔥 HACKADEMIA registrations now open!",
+        message: "🔥 CYBERNAUTICA 2025 - Registration open until July 11th, 2025 by 11:59 PM",
         type: "success",
         isActive: true
       },
       {
-        message: "🎯 CODEUNDRUM Level 2 starting soon",
+        message: "📅 Event Date: July 18th, 2025 | Reporting Time: 8:00 AM | Concludes by 4:00 PM",
         type: "info",
         isActive: true
       },
       {
-        message: "🔐 CYPHRANEXUS team formation deadline approaching",
+        message: "⚠️ Each student can participate in only ONE event. Bring valid school ID.",
         type: "warning",
+        isActive: true
+      },
+      {
+        message: "📱 All phones must be deposited at registration desk upon arrival",
+        type: "info",
         isActive: true
       }
     ];

@@ -26,15 +26,15 @@
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
 
-  /* Cyberpunk theme colors */
+  /* Cyberpunk theme colors - Updated to match Cybernautica logo */
   --cyber-dark: hsl(240, 100%, 3%);
   --cyber-slate: hsl(240, 85%, 11%);
   --cyber-blue: hsl(221, 83%, 23%);
-  --cyber-cyan: hsl(185, 100%, 50%);
-  --cyber-green: hsl(104, 100%, 54%);
-  --cyber-pink: hsl(320, 100%, 50%);
+  --cyber-cyan: hsl(185, 100%, 60%);
+  --cyber-green: hsl(150, 100%, 54%);
+  --cyber-pink: hsl(320, 100%, 70%);
   --cyber-red: hsl(348, 83%, 47%);
-  --cyber-purple: hsl(271, 100%, 50%);
+  --cyber-purple: hsl(280, 100%, 60%);
   --cyber-yellow: hsl(60, 100%, 50%);
 }
 

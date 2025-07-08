@@ -70,8 +70,6 @@ export default function Window({
     switch (window.type) {
       case "terminal":
         return "border-cyber-green";
-      case "arcade":
-        return "border-cyber-pink";
       case "app-center":
         return "border-cyber-cyan";
       default:
@@ -83,8 +81,6 @@ export default function Window({
     switch (window.type) {
       case "terminal":
         return "text-cyber-green";
-      case "arcade":
-        return "text-cyber-pink";
       case "app-center":
         return "text-cyber-cyan";
       default:

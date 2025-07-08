@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useWindowManager } from "@/hooks/use-window-manager";
 import Window from "@/components/window";
 import Terminal from "@/components/terminal";
-import Arcade from "@/components/arcade";
 import AppCenter from "@/components/app-center";
 import Settings from "@/components/settings";
 import CodeundrumApp from "@/components/events/codeundrum-app";
@@ -29,9 +28,7 @@ export default function Desktop() {
     windowManager.createWindow("terminal", "Terminal");
   };
 
-  const openArcade = () => {
-    windowManager.createWindow("arcade", "CYBERNAUTICA ARCADE");
-  };
+
 
   const openAppCenter = () => {
     windowManager.createWindow("app-center", "CYBERNAUTICA CENTRAL");
@@ -49,8 +46,6 @@ export default function Desktop() {
     switch (window.type) {
       case "terminal":
         return <Terminal />;
-      case "arcade":
-        return <Arcade />;
       case "app-center":
         return <AppCenter />;
       case "settings":
@@ -89,13 +84,13 @@ export default function Desktop() {
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-3">
             <img 
-              src="/attached_assets/image_1751968479900.png" 
+              src="/attached_assets/tmp_e69375cb-a5fc-4c7f-a0bb-0b09e42eaaf4_1751974263538.png" 
               alt="Cybernautica Logo" 
               className="w-8 h-8 object-contain logo-header"
             />
             <div className="text-cyber-cyan font-display font-bold">CYBERNAUTICA</div>
             <img 
-              src="/attached_assets/tmp_e69375cb-a5fc-4c7f-a0bb-0b09e42eaaf4_1751968465899.png" 
+              src="/attached_assets/image_1751974288082.png" 
               alt="School Logo" 
               className="w-8 h-8 object-contain logo-header"
             />
@@ -131,7 +126,7 @@ export default function Desktop() {
           {/* Cybernautica logo backdrop - main wallpaper */}
           <div className="absolute inset-0 flex items-center justify-center opacity-20">
             <img 
-              src="/attached_assets/image_1751968479900.png" 
+              src="/attached_assets/tmp_e69375cb-a5fc-4c7f-a0bb-0b09e42eaaf4_1751974263538.png" 
               alt="Cybernautica Logo" 
               className="w-screen h-screen object-contain logo-backdrop"
             />
@@ -214,16 +209,7 @@ export default function Desktop() {
             <span className="text-xs mt-2 text-center font-medium">Terminal</span>
           </div>
           
-          <div 
-            className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
-            onClick={openArcade}
-          >
-            <div className="w-12 h-12 bg-cyber-pink/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-pink/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-pink/30">
-              <i className="fas fa-gamepad text-xl text-cyber-pink"></i>
-            </div>
-            <span className="text-xs mt-2 text-center font-medium">Arcade</span>
-          </div>
-          
+
           <div 
             className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
             onClick={openAppCenter}
@@ -298,13 +284,7 @@ export default function Desktop() {
             <i className="fas fa-terminal text-cyber-green"></i>
           </div>
           
-          <div 
-            className="dock-icon w-12 h-12 bg-cyber-pink/20 rounded-xl flex items-center justify-center hover:bg-cyber-pink/40 transition-all cursor-pointer glow-hover"
-            onClick={openArcade}
-          >
-            <i className="fas fa-gamepad text-cyber-pink"></i>
-          </div>
-          
+
           <div 
             className="dock-icon w-12 h-12 bg-cyber-cyan/20 rounded-xl flex items-center justify-center hover:bg-cyber-cyan/40 transition-all cursor-pointer glow-hover"
             onClick={openAppCenter}
