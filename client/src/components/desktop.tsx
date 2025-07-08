@@ -98,25 +98,76 @@ export default function Desktop() {
       <div className="pt-16 p-8 h-full relative">
         {/* Desktop Background */}
         <div className="absolute inset-0 cyber-wallpaper">
-          <div className="absolute inset-0 bg-gradient-to-br from-cyber-dark via-purple-900/20 to-cyber-dark"></div>
-          <div className="absolute inset-0 opacity-30">
-            <div className="h-full w-full" style={{
+          {/* Main wallpaper layer */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/40 to-slate-900"></div>
+          
+          {/* Cybernautica themed wallpaper */}
+          <div className="absolute inset-0 opacity-60">
+            <div className="h-full w-full bg-gradient-to-br from-cyber-dark via-purple-900/30 to-cyber-dark" style={{
               backgroundImage: `
-                radial-gradient(circle at 20% 80%, rgba(0, 245, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 0, 128, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(57, 255, 20, 0.1) 0%, transparent 50%)
+                radial-gradient(circle at 25% 25%, rgba(0, 245, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 75% 75%, rgba(255, 0, 128, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(57, 255, 20, 0.1) 0%, transparent 30%),
+                linear-gradient(45deg, transparent 30%, rgba(0, 245, 255, 0.05) 50%, transparent 70%)
               `
             }}></div>
           </div>
-          <div className="absolute inset-0 opacity-20">
+
+          {/* Animated particles */}
+          <div className="absolute inset-0 opacity-30">
+            <div className="particle-1 absolute w-2 h-2 bg-cyber-cyan rounded-full animate-pulse" style={{
+              top: '20%',
+              left: '10%',
+              animationDelay: '0s',
+              animationDuration: '3s'
+            }}></div>
+            <div className="particle-2 absolute w-1 h-1 bg-cyber-pink rounded-full animate-pulse" style={{
+              top: '60%',
+              right: '15%',
+              animationDelay: '1s',
+              animationDuration: '4s'
+            }}></div>
+            <div className="particle-3 absolute w-1.5 h-1.5 bg-cyber-green rounded-full animate-pulse" style={{
+              bottom: '30%',
+              left: '70%',
+              animationDelay: '2s',
+              animationDuration: '5s'
+            }}></div>
+          </div>
+
+          {/* Grid overlay */}
+          <div className="absolute inset-0 opacity-15">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00F5FF" strokeWidth="0.5" opacity="0.3"/>
+                <pattern id="cybernautica-grid" width="50" height="50" patternUnits="userSpaceOnUse">
+                  <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#00F5FF" strokeWidth="0.5" opacity="0.6"/>
+                  <circle cx="25" cy="25" r="1" fill="#00F5FF" opacity="0.3"/>
                 </pattern>
               </defs>
-              <rect width="100%" height="100%" fill="url(#grid)" />
+              <rect width="100%" height="100%" fill="url(#cybernautica-grid)" />
             </svg>
+          </div>
+
+          {/* Cybernautica logo watermark */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="text-9xl font-display font-bold text-cyber-cyan opacity-5 select-none">
+              CYBERNAUTICA
+            </div>
+          </div>
+
+          {/* Floating elements */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="floating-element-1 absolute w-32 h-32 border border-cyber-cyan/10 rounded-full animate-spin" style={{
+              top: '15%',
+              right: '20%',
+              animationDuration: '20s'
+            }}></div>
+            <div className="floating-element-2 absolute w-24 h-24 border border-cyber-pink/10 rounded-full animate-spin" style={{
+              bottom: '25%',
+              left: '15%',
+              animationDuration: '25s',
+              animationDirection: 'reverse'
+            }}></div>
           </div>
         </div>
         
