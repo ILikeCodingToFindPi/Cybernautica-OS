@@ -89,13 +89,13 @@ export default function Desktop() {
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-3">
             <img 
-              src="/assets/cybernautica-logo.png" 
+              src="/attached_assets/image_1751968479900.png" 
               alt="Cybernautica Logo" 
               className="w-8 h-8 object-contain logo-header"
             />
             <div className="text-cyber-cyan font-display font-bold">CYBERNAUTICA</div>
             <img 
-              src="/assets/school-logo.png" 
+              src="/attached_assets/tmp_e69375cb-a5fc-4c7f-a0bb-0b09e42eaaf4_1751968465899.png" 
               alt="School Logo" 
               className="w-8 h-8 object-contain logo-header"
             />
@@ -128,12 +128,12 @@ export default function Desktop() {
           {/* Main wallpaper layer */}
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/40 to-slate-900"></div>
           
-          {/* Event logo backdrop */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-15">
+          {/* Cybernautica logo backdrop - main wallpaper */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-20">
             <img 
-              src="/assets/cybernautica-logo.png" 
+              src="/attached_assets/image_1751968479900.png" 
               alt="Cybernautica Logo" 
-              className="w-96 h-96 object-contain logo-backdrop"
+              className="w-screen h-screen object-contain logo-backdrop"
             />
           </div>
           
@@ -184,14 +184,7 @@ export default function Desktop() {
             </svg>
           </div>
 
-          {/* Cybernautica logo watermark */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <img 
-              src="/assets/cybernautica-logo.png" 
-              alt="Cybernautica Logo" 
-              className="w-80 h-80 object-contain opacity-10 select-none"
-            />
-          </div>
+          
 
           {/* Floating elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
