@@ -250,23 +250,85 @@ export default function Desktop() {
           </div>
         </div>
 
-        {/* Event Apps Row */}
-        {windowManager.installedApps.length > 0 && (
-          <div key={`apps-grid-${windowManager.installedApps.length}`} className="absolute top-24 left-32 grid grid-cols-4 gap-4 z-10">
-            {windowManager.installedApps.map((app, index) => (
-              <div 
-                key={`installed-app-${app.id}-${index}`}
-                className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
-                onClick={() => windowManager.createWindow(app.type as any, `${app.name} - Event Details`)}
-              >
-                <div className="w-12 h-12 bg-cyber-cyan/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-cyan/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-cyan/30">
-                  <i className={`${app.icon} text-xl text-cyber-cyan`}></i>
-                </div>
-                <span className="text-xs mt-2 text-center font-medium">{app.name}</span>
-              </div>
-            ))}
+        {/* Event Apps Row - Always visible */}
+        <div className="absolute top-24 left-32 grid grid-cols-4 gap-4 z-10">
+          {/* CODEUNDRUM */}
+          <div 
+            className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
+            onClick={() => windowManager.createWindow("codeundrum-app", "CODEUNDRUM - Event Details")}
+          >
+            <div className="w-12 h-12 bg-cyber-green/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-green/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-green/30">
+              <i className="fas fa-code text-xl text-cyber-green"></i>
+            </div>
+            <span className="text-xs mt-2 text-center font-medium">CODEUNDRUM</span>
           </div>
-        )}
+
+          {/* HACKADEMIA */}
+          <div 
+            className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
+            onClick={() => windowManager.createWindow("hackademia-app", "HACKADEMIA - Event Details")}
+          >
+            <div className="w-12 h-12 bg-cyber-cyan/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-cyan/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-cyan/30">
+              <i className="fas fa-robot text-xl text-cyber-cyan"></i>
+            </div>
+            <span className="text-xs mt-2 text-center font-medium">HACKADEMIA</span>
+          </div>
+
+          {/* CYPHRANEXUS */}
+          <div 
+            className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
+            onClick={() => windowManager.createWindow("cyphranexus-app", "CYPHRANEXUS - Event Details")}
+          >
+            <div className="w-12 h-12 bg-cyber-pink/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-pink/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-pink/30">
+              <i className="fas fa-lock text-xl text-cyber-pink"></i>
+            </div>
+            <span className="text-xs mt-2 text-center font-medium">CYPHRANEXUS</span>
+          </div>
+
+          {/* HIGH STAKES */}
+          <div 
+            className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
+            onClick={() => windowManager.createWindow("high-stakes-app", "HIGH STAKES - Event Details")}
+          >
+            <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center group-hover:bg-purple-500/40 transition-all group-hover:shadow-lg group-hover:shadow-purple-500/30">
+              <i className="fas fa-dice text-xl text-purple-500"></i>
+            </div>
+            <span className="text-xs mt-2 text-center font-medium">HIGH STAKES</span>
+          </div>
+
+          {/* BREAKING VIRTUAL */}
+          <div 
+            className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
+            onClick={() => windowManager.createWindow("breaking-virtual-app", "BREAKING VIRTUAL - Event Details")}
+          >
+            <div className="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center group-hover:bg-red-500/40 transition-all group-hover:shadow-lg group-hover:shadow-red-500/30">
+              <i className="fas fa-vr-cardboard text-xl text-red-500"></i>
+            </div>
+            <span className="text-xs mt-2 text-center font-medium">BREAKING VIRTUAL</span>
+          </div>
+
+          {/* GEOMETRY DASH */}
+          <div 
+            className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
+            onClick={() => windowManager.createWindow("geometry-dash-app", "GEOMETRY DASH - Event Details")}
+          >
+            <div className="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center group-hover:bg-yellow-500/40 transition-all group-hover:shadow-lg group-hover:shadow-yellow-500/30">
+              <i className="fas fa-microchip text-xl text-yellow-500"></i>
+            </div>
+            <span className="text-xs mt-2 text-center font-medium">GEOMETRY DASH</span>
+          </div>
+
+          {/* SONARIA */}
+          <div 
+            className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
+            onClick={() => windowManager.createWindow("sonaria-app", "SONARIA - Event Details")}
+          >
+            <div className="w-12 h-12 bg-indigo-500/20 rounded-xl flex items-center justify-center group-hover:bg-indigo-500/40 transition-all group-hover:shadow-lg group-hover:shadow-indigo-500/30">
+              <i className="fas fa-music text-xl text-indigo-500"></i>
+            </div>
+            <span className="text-xs mt-2 text-center font-medium">SONARIA</span>
+          </div>
+        </div>
 
         {/* Windows */}
         <div className="absolute inset-0 pt-16 pb-20">
