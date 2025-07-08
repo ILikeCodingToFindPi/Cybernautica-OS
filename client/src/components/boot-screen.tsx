@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 
 interface BootScreenProps {
@@ -32,8 +33,8 @@ export default function BootScreen({ onComplete }: BootScreenProps) {
           setCurrentLogIndex(prev => prev + 1);
         }
 
-        // Complete boot after 5 seconds
-        if (newTime >=3.0) {
+        // Complete boot after 3 seconds
+        if (newTime >= 3.0) {
           clearInterval(interval);
           setTimeout(() => {
             onComplete();

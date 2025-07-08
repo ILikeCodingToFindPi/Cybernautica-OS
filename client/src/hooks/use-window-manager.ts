@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 export interface Window {
   id: string;
@@ -11,9 +11,45 @@ export interface Window {
   isMaximized: boolean;
 }
 
+export interface InstalledApp {
+  id: number;
+  name: string;
+  type: string;
+  icon: string;
+  color: string;
+}
+
 export function useWindowManager() {
   const [windows, setWindows] = useState<Window[]>([]);
   const [nextZIndex, setNextZIndex] = useState(1000);
+  const [installedApps, setInstalledApps] = useState<InstalledApp[]>([]);
+
+  // Load installed apps from localStorage on mount
+  useEffect(() => {
+    const savedApps = localStorage.getItem('cybernautica-installed-apps');
+    if (savedApps) {
+      setInstalledApps(JSON.parse(savedApps));
+    }
+  }, []);
+
+  // Save installed apps to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('cybernautica-installed-apps', JSON.stringify(installedApps));
+  }, [installedApps]);
+
+  const addInstalledApp = useCallback((app: InstalledApp) => {
+    setInstalledApps(prev => {
+      // Check if app is already installed
+      if (prev.find(installedApp => installedApp.id === app.id)) {
+        return prev;
+      }
+      return [...prev, app];
+    });
+  }, []);
+
+  const removeInstalledApp = useCallback((appId: number) => {
+    setInstalledApps(prev => prev.filter(app => app.id !== appId));
+  }, []);
 
   const createWindow = useCallback((type: Window["type"], title: string) => {
     const newWindow: Window = {
@@ -83,6 +119,9 @@ export function useWindowManager() {
     maximizeWindow,
     updateWindowPosition,
     updateWindowSize,
+    installedApps,
+    addInstalledApp,
+    removeInstalledApp,
   };
 }
 

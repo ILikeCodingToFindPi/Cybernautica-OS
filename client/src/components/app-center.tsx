@@ -18,13 +18,23 @@ export default function AppCenter() {
   });
 
   const installAppMutation = useMutation({
-    mutationFn: async (eventId: number) => {
+    mutationFn: async (event: Event) => {
       const response = await fetch("/api/installed-apps", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ userId: 1, eventId }),
+        body: JSON.stringify({ userId: 1, eventId: event.id }),
       });
       if (!response.ok) throw new Error("Failed to install app");
+      
+      // Add to local installed apps
+      windowManager.addInstalledApp({
+        id: event.id,
+        name: event.name,
+        type: getEventAppType(event.name),
+        icon: getEventIcon(event),
+        color: event.color
+      });
+      
       return response.json();
     },
     onSuccess: () => {
@@ -139,7 +149,7 @@ export default function AppCenter() {
         <div className="flex items-center space-x-4">
           <div className="w-16 h-16 bg-gradient-to-br from-cyber-cyan to-cyber-green rounded-lg flex items-center justify-center">
             <img 
-              src="/attached_assets/image_1751968479900.png" 
+              src="/assets/cybernautica-logo.png" 
               alt="Cybernautica Logo" 
               className="w-10 h-10 object-contain"
             />
@@ -150,7 +160,7 @@ export default function AppCenter() {
           </div>
         </div>
         <img 
-          src="/attached_assets/tmp_e69375cb-a5fc-4c7f-a0bb-0b09e42eaaf4_1751968465899.png" 
+          src="/assets/school-logo.png" 
           alt="School Logo" 
           className="w-12 h-12 object-contain"
         />
@@ -202,11 +212,12 @@ export default function AppCenter() {
                   LAUNCH APP
                 </Button>
                 <Button
-                  onClick={() => installAppMutation.mutate(event.id)}
-                  disabled={installAppMutation.isPending}
+                  onClick={() => installAppMutation.mutate(event)}
+                  disabled={installAppMutation.isPending || windowManager.installedApps.some(app => app.id === event.id)}
                   className={`flex-1 py-2 rounded-lg transition-all font-semibold text-sm ${getButtonColorClass(event.color)}`}
                 >
-                  {installAppMutation.isPending ? "INSTALLING..." : "INSTALL"}
+                  {installAppMutation.isPending ? "INSTALLING..." : 
+                   windowManager.installedApps.some(app => app.id === event.id) ? "INSTALLED" : "INSTALL"}
                 </Button>
               </div>
             </div>

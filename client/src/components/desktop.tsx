@@ -89,13 +89,13 @@ export default function Desktop() {
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-3">
             <img 
-              src="/attached_assets/image_1751968479900.png" 
+              src="/assets/cybernautica-logo.png" 
               alt="Cybernautica Logo" 
               className="w-8 h-8 object-contain logo-header"
             />
             <div className="text-cyber-cyan font-display font-bold">CYBERNAUTICA</div>
             <img 
-              src="/attached_assets/tmp_e69375cb-a5fc-4c7f-a0bb-0b09e42eaaf4_1751968465899.png" 
+              src="/assets/school-logo.png" 
               alt="School Logo" 
               className="w-8 h-8 object-contain logo-header"
             />
@@ -131,7 +131,7 @@ export default function Desktop() {
           {/* Event logo backdrop */}
           <div className="absolute inset-0 flex items-center justify-center opacity-15">
             <img 
-              src="/attached_assets/image_1751968479900.png" 
+              src="/assets/cybernautica-logo.png" 
               alt="Cybernautica Logo" 
               className="w-96 h-96 object-contain logo-backdrop"
             />
@@ -187,7 +187,7 @@ export default function Desktop() {
           {/* Cybernautica logo watermark */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <img 
-              src="/attached_assets/image_1751968479900.png" 
+              src="/assets/cybernautica-logo.png" 
               alt="Cybernautica Logo" 
               className="w-80 h-80 object-contain opacity-10 select-none"
             />
@@ -260,6 +260,20 @@ export default function Desktop() {
             </div>
             <span className="text-xs mt-2 text-center font-medium">Settings</span>
           </div>
+
+          {/* Installed Event Apps */}
+          {windowManager.installedApps.map((app) => (
+            <div 
+              key={app.id}
+              className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
+              onClick={() => windowManager.createWindow(app.type as any, `${app.name} - Event Details`)}
+            >
+              <div className={`w-12 h-12 bg-${app.color}/20 rounded-xl flex items-center justify-center group-hover:bg-${app.color}/40 transition-all group-hover:shadow-lg group-hover:shadow-${app.color}/30`}>
+                <i className={`${app.icon} text-xl text-${app.color}`}></i>
+              </div>
+              <span className="text-xs mt-2 text-center font-medium">{app.name}</span>
+            </div>
+          ))}
         </div>
 
         {/* Windows */}
