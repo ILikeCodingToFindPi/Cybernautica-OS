@@ -33,7 +33,7 @@ export default function BootScreen({ onComplete }: BootScreenProps) {
         }
         
         // Complete boot after 5 seconds
-        if (newTime >= 5.0) {
+        if (newTime >=3.0) {
           clearInterval(interval);
           setTimeout(() => {
             onComplete();

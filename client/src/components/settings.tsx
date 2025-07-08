@@ -56,7 +56,7 @@ export default function Settings() {
                   </div>
                   <div className="space-y-2">
                     <h4 className="font-semibold text-cyber-pink">Total Participants</h4>
-                    <p className="text-sm text-cyber-green">500+ Registered</p>
+                    <p className="text-sm text-cyber-green">300+ Registered</p>
                   </div>
                 </div>
 
@@ -113,8 +113,8 @@ export default function Settings() {
                   <div className="space-y-4">
                     <div>
                       <h4 className="font-semibold text-cyber-pink mb-2">Establishment</h4>
-                      <p className="text-sm text-gray-300">Founded in 2004</p>
-                      <p className="text-sm text-gray-300">20+ years of academic excellence</p>
+                      <p className="text-sm text-gray-300">Founded in 2008</p>
+                      <p className="text-sm text-gray-300">17+ years of academic excellence</p>
                     </div>
 
                     <div>
@@ -123,7 +123,7 @@ export default function Settings() {
                         <li>• CBSE Board Affiliation</li>
                         <li>• Classes KG to XII</li>
                         <li>• Science, Commerce & Humanities</li>
-                        <li>• Advanced Technology Integration</li>
+                        
                       </ul>
                     </div>
                   </div>
@@ -141,13 +141,8 @@ export default function Settings() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-cyber-pink mb-2">Academic Excellence</h4>
-                      <ul className="text-sm text-gray-300 space-y-1">
-                        <li>• 95%+ Board Results</li>
-                        <li>• Top University Placements</li>
-                        <li>• National Competition Winners</li>
-                        <li>• STEM Program Leaders</li>
-                      </ul>
+
+                      
                     </div>
                   </div>
                 </div>
@@ -206,8 +201,8 @@ export default function Settings() {
                     <Phone className="w-5 h-5 text-cyber-green" />
                     <div>
                       <p className="font-semibold">Phone</p>
-                      <p className="text-sm text-gray-300">+91 80 4096 0123</p>
-                      <p className="text-sm text-gray-300">+91 80 4096 0124</p>
+                      <p className="text-sm text-gray-300">+91 80 - 2572 9406 / 07 / 08 </p>
+                      
                     </div>
                   </div>
 
@@ -215,8 +210,8 @@ export default function Settings() {
                     <Mail className="w-5 h-5 text-cyber-pink" />
                     <div>
                       <p className="font-semibold">Email</p>
-                      <p className="text-sm text-gray-300">info@npshsr.edu.in</p>
-                      <p className="text-sm text-gray-300">principal@npshsr.edu.in</p>
+                      <p className="text-sm text-gray-300"> info@npshsr.com</p>
+                      
                     </div>
                   </div>
 
@@ -238,20 +233,15 @@ export default function Settings() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="space-y-3">
-                    <h4 className="font-semibold text-cyber-pink">Technical Support</h4>
-                    <div className="space-y-2 text-sm">
-                      <p>Event Issues: events@cybernautica.in</p>
-                      <p>Tech Support: tech@cybernautica.in</p>
-                      <p>Registration: register@cybernautica.in</p>
-                    </div>
+                    
                   </div>
 
                   <div className="space-y-3">
                     <h4 className="font-semibold text-cyber-pink">Event Coordinators</h4>
                     <div className="space-y-2 text-sm">
-                      <p>Faculty Coordinator: Dr. Priya Sharma</p>
-                      <p>Student Lead: Arjun Patel (Class XII)</p>
-                      <p>Tech Team: tech-team@npshsr.edu.in</p>
+                     
+                      
+                      <p>Tech Team: Deeptarka Dey, Pranjal Jain</p>
                     </div>
                   </div>
 
@@ -272,17 +262,14 @@ export default function Settings() {
               <CardHeader>
                 <CardTitle className="text-cyber-cyan">About CYBERNAUTICA</CardTitle>
                 <CardDescription>
-                  Next-generation hackathon platform developed by NPSHSR
+                  Cybernautica is NPSHSR's biennial technology and innovation fest, a world full of AI, robotics and coding adventures.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div>
                   <h4 className="font-semibold text-cyber-pink mb-3">Project Overview</h4>
                   <p className="text-sm text-gray-300 leading-relaxed">
-                    CYBERNAUTICA is an immersive cyberpunk-themed operating system simulation designed to host 
-                    technology competitions and educational events. Developed entirely by students and faculty 
-                    at National Public School HSR Layout, this platform represents the cutting edge of 
-                    educational technology integration.
+
                   </p>
                 </div>
 
@@ -290,12 +277,18 @@ export default function Settings() {
                   <h4 className="font-semibold text-cyber-pink mb-3">Development Team</h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <h5 className="font-semibold text-cyber-cyan">Core Developers</h5>
+                      <h5 className="font-semibold text-cyber-cyan">Core Team</h5>
                       <ul className="text-sm text-gray-300 space-y-1">
-                        <li>• Student Development Team (Class XI-XII)</li>
-                        <li>• Computer Science Faculty</li>
-                        <li>• Alumni Tech Mentors</li>
-                        <li>• Industry Professional Advisors</li>
+                  <li>• Aarush </li>  
+                         <li>• Asmii </li>   
+                         <li>• Vibha</li>   
+                         <li>• Megha </li>   
+                         <li>• Anaika </li>   
+                         <li>• Prithvi </li>   
+                        
+                        
+                        
+                        
                       </ul>
                     </div>
                     <div className="space-y-2">
@@ -303,8 +296,8 @@ export default function Settings() {
                       <ul className="text-sm text-gray-300 space-y-1">
                         <li>• React & TypeScript</li>
                         <li>• Modern Web Technologies</li>
-                        <li>• Real-time Communication</li>
-                        <li>• Cyberpunk Design System</li>
+                        
+                        
                       </ul>
                     </div>
                   </div>
@@ -318,15 +311,12 @@ export default function Settings() {
                       <div className="text-xs text-gray-400">Active Events</div>
                     </div>
                     <div className="text-center p-3 bg-slate-900/50 rounded">
-                      <div className="text-2xl font-bold text-cyber-cyan">500+</div>
+                      <div className="text-2xl font-bold text-cyber-cyan">300+</div>
                       <div className="text-xs text-gray-400">Participants</div>
                     </div>
+                    
                     <div className="text-center p-3 bg-slate-900/50 rounded">
-                      <div className="text-2xl font-bold text-cyber-pink">₹2L+</div>
-                      <div className="text-xs text-gray-400">Prize Pool</div>
-                    </div>
-                    <div className="text-center p-3 bg-slate-900/50 rounded">
-                      <div className="text-2xl font-bold text-cyber-yellow">48</div>
+                      <div className="text-2xl font-bold text-cyber-yellow">4</div>
                       <div className="text-xs text-gray-400">Hours Total</div>
                     </div>
                   </div>

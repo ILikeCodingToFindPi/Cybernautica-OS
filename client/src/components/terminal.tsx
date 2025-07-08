@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { processCommand } from "@/lib/terminal-commands";
+import { ThemeContext } from "@/hooks/use-theme";
 
 interface TerminalLine {
   type: "command" | "output";
@@ -11,7 +12,7 @@ export default function Terminal() {
   const [lines, setLines] = useState<TerminalLine[]>([
     {
       type: "output",
-      content: "Welcome to CYBERNAUTICA Terminal v2.1.0\nType 'help' for available commands\n",
+      content: "Welcome to CYBERNAUTICA Terminal v2.1.0\nType 'help' for available commands\n All important details are present here...navigate the filesystem to find them.",
       timestamp: Date.now(),
     },
   ]);
@@ -34,7 +35,7 @@ export default function Terminal() {
         ...prev,
         {
           type: "command",
-          content: `deeptarka@cybernautica:${currentDirectory}$ ${command}`,
+          content: `user@cybernautica:${currentDirectory}$ ${command}`,
           timestamp: Date.now(),
         },
       ]);
@@ -93,7 +94,7 @@ export default function Terminal() {
       {/* Terminal Input */}
       <div className="p-4 border-t border-cyber-green/30 flex items-center">
         <span className="text-cyber-cyan font-mono text-sm mr-2">
-          deeptarka@cybernautica:{currentDirectory}$
+          user@cybernautica:{currentDirectory}$
         </span>
         <input
           type="text"

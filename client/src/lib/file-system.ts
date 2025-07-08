@@ -19,8 +19,8 @@ Deployment: via GitHub
 This event challenges students to create innovative AI solutions for educational purposes. Teams will develop AI-powered tools that can assist in learning, such as intelligent tutoring systems, automated grading systems, or personalized learning assistants.
 
 Registration: Open now!
-Deadline: December 15, 2024
-Contact: hackademia@cybernautica.org`,
+Deadline: July 18, 2025
+Contact: events@npshsr.com`,
 
         'Codeundrum.txt': `CODEUNDRUM Event Information
 
@@ -54,8 +54,8 @@ Skills Required:
 Example Challenge: Beale Cipher-based riddles
 Teams will navigate through a series of interconnected cryptographic puzzles, each revealing clues to the next challenge. This event combines historical ciphers with modern cryptographic concepts.
 
-Team Formation Deadline: December 10, 2024
-Event Date: December 20, 2024`,
+Team Formation Deadline: 11 July 2025
+Event Date: July 18, 2025`,
 
         'Events_List.txt': `CYBERNAUTICA 2024 Events Overview
 
@@ -81,8 +81,8 @@ Event Date: December 20, 2024`,
    Team event (6-8 members) for grades 9-12
 
 Total Prize Pool: $50,000
-Registration Deadline: December 15, 2024
-Event Dates: December 20-22, 2024`,
+Registration Deadline: July 11, 2025
+Event Dates: July 18, 2025`,
 
         'Registration_Info.txt': `CYBERNAUTICA Registration Information
 
@@ -98,14 +98,11 @@ Required Documents:
 - Parental consent (for minors)
 - Team formation agreement (team events)
 
-Important Dates:
-- Early Bird Registration: Until December 1 ($20 fee)
-- Regular Registration: December 1-15 ($25 fee)
-- Event Dates: December 20-22, 2024
+
 
 Contact: 
-Email: register@cybernautica.org
-Phone: 1-800-CYBER-24
+Email: events@npshsr.com
+Phone: 7975796436
 Discord: discord.gg/cybernautica`
       },
       'Readme.txt': 'Welcome to the CYBERNAUTICA file system! Explore the Events folder to learn about our hackathon competitions.'

@@ -8,7 +8,7 @@ interface LoginScreenProps {
 }
 
 export default function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
-  const [username, setUsername] = useState("deeptarka@cybernautica");
+  const [username, setUsername] = useState("User");
   const [password, setPassword] = useState("");
 
   const handleLogin = (e: React.FormEvent) => {
@@ -52,7 +52,7 @@ export default function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter secure passphrase"
+              placeholder="Enter secure passphrase (Anything)"
               className="w-full bg-black/30 border border-cyber-cyan/30 rounded-lg px-4 py-3 focus:border-cyber-cyan focus:outline-none glow-hover transition-all duration-300 text-white"
             />
           </div>
