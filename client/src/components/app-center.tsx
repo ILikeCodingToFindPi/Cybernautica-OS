@@ -26,7 +26,12 @@ export default function AppCenter() {
       });
       if (!response.ok) throw new Error("Failed to install app");
       
-      // Add to local installed apps
+      return { event, response: await response.json() };
+    },
+    onSuccess: (data) => {
+      const { event } = data;
+      
+      // Add to local installed apps immediately
       windowManager.addInstalledApp({
         id: event.id,
         name: event.name,
@@ -35,13 +40,11 @@ export default function AppCenter() {
         color: event.color
       });
       
-      return response.json();
-    },
-    onSuccess: () => {
       toast({
         title: "App Installed",
-        description: "Event has been added to your desktop!",
+        description: `${event.name} has been added to your desktop!`,
       });
+      
       queryClient.invalidateQueries({ queryKey: ["/api/users/1/installed-apps"] });
     },
     onError: () => {

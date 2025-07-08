@@ -255,12 +255,12 @@ export default function Desktop() {
           <div className="absolute top-24 left-32 grid grid-cols-4 gap-4 z-10">
             {windowManager.installedApps.map((app) => (
               <div 
-                key={app.id}
+                key={`installed-app-${app.id}`}
                 className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
                 onClick={() => windowManager.createWindow(app.type as any, `${app.name} - Event Details`)}
               >
-                <div className={`w-12 h-12 bg-${app.color}/20 rounded-xl flex items-center justify-center group-hover:bg-${app.color}/40 transition-all group-hover:shadow-lg group-hover:shadow-${app.color}/30`}>
-                  <i className={`${app.icon} text-xl text-${app.color}`}></i>
+                <div className="w-12 h-12 bg-cyber-cyan/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-cyan/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-cyan/30">
+                  <i className={`${app.icon} text-xl text-cyber-cyan`}></i>
                 </div>
                 <span className="text-xs mt-2 text-center font-medium">{app.name}</span>
               </div>
