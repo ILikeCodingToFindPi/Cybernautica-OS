@@ -19,19 +19,7 @@ export default function AppCenter() {
 
   const installAppMutation = useMutation({
     mutationFn: async (event: Event) => {
-      const response = await fetch("/api/installed-apps", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ userId: 1, eventId: event.id }),
-      });
-      if (!response.ok) throw new Error("Failed to install app");
-      
-      return { event, response: await response.json() };
-    },
-    onSuccess: (data) => {
-      const { event } = data;
-      
-      // Add to local installed apps immediately
+      // Add to local installed apps immediately (optimistic update)
       windowManager.addInstalledApp({
         id: event.id,
         name: event.name,
@@ -39,6 +27,22 @@ export default function AppCenter() {
         icon: getEventIcon(event),
         color: event.color
       });
+
+      const response = await fetch("/api/installed-apps", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userId: 1, eventId: event.id }),
+      });
+      if (!response.ok) {
+        // Remove from local state if API call fails
+        windowManager.removeInstalledApp(event.id);
+        throw new Error("Failed to install app");
+      }
+      
+      return { event, response: await response.json() };
+    },
+    onSuccess: (data) => {
+      const { event } = data;
       
       toast({
         title: "App Installed",
