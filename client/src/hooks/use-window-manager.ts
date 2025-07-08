@@ -41,12 +41,13 @@ export function useWindowManager() {
     setInstalledApps(prev => {
       // Check if app is already installed
       if (prev.find(installedApp => installedApp.id === app.id)) {
-        console.log(`App ${app.name} already installed`);
         return prev;
       }
-      console.log(`Installing app: ${app.name}`);
       const newApps = [...prev, app];
-      console.log('Installed apps updated:', newApps);
+      // Force immediate state update
+      setTimeout(() => {
+        setInstalledApps(current => [...current]);
+      }, 0);
       return newApps;
     });
   }, []);

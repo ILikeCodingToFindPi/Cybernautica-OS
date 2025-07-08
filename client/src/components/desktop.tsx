@@ -252,10 +252,10 @@ export default function Desktop() {
 
         {/* Event Apps Row */}
         {windowManager.installedApps.length > 0 && (
-          <div className="absolute top-24 left-32 grid grid-cols-4 gap-4 z-10">
-            {windowManager.installedApps.map((app) => (
+          <div key={`apps-grid-${windowManager.installedApps.length}`} className="absolute top-24 left-32 grid grid-cols-4 gap-4 z-10">
+            {windowManager.installedApps.map((app, index) => (
               <div 
-                key={`installed-app-${app.id}`}
+                key={`installed-app-${app.id}-${index}`}
                 className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
                 onClick={() => windowManager.createWindow(app.type as any, `${app.name} - Event Details`)}
               >
