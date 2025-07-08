@@ -22,8 +22,12 @@ export default function CybernaruticaOS() {
 
   return (
     <div className="min-h-screen w-full">
-      {systemState === "booting" && <BootScreen onComplete={handleBootComplete} />}
-      {systemState === "login" && <LoginScreen onLoginSuccess={handleLoginSuccess} />}
+      {systemState === "booting" && (
+        <BootScreen onComplete={handleBootComplete} />
+      )}
+      {systemState === "login" && (
+        <LoginScreen onLoginSuccess={handleLoginSuccess} />
+      )}
       {systemState === "desktop" && <Desktop />}
     </div>
   );
