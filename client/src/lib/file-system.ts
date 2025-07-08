@@ -10,335 +10,121 @@ const fileSystem: FileSystemNode = {
 
 Theme: AI for Education
 Grades: 9-12
-Type: Team (2-3 members)
-Prize: $8,000
+Type: Team Event (2-3 members per team)
+Equipment: Bring your own laptops; Wi-Fi will be provided
 
-Goal: Build educational AI tools like chatbot tutors
-Tech Stack: Any programming language
-Deployment: via GitHub
+What is HACKADEMIA?
+In this electrifying race against time, teams will design AI-powered tools that reimagine how students learn, revise, and understand school subjects. Think chatbots that explain calculus, physics or chemistry-if it teaches, it counts!
 
-This event challenges students to create innovative AI solutions for educational purposes. Teams will develop AI-powered tools that can assist in learning, such as intelligent tutoring systems, automated grading systems, or personalized learning assistants.
+Special Note: Subject drop happens 1 day before the hackathon
 
-Key Features:
-- AI-powered chatbot tutors
-- Automated grading systems
-- Personalized learning assistants
-- Educational content recommendation systems
-- Study schedule optimization tools
-
-Judging Criteria:
-- Innovation and creativity
-- Technical implementation
-- Educational impact
-- User experience
-- Scalability
-
-Registration: Open now!
-Deadline: July 18, 2025
-Contact: events@npshsr.com`,
+Event Heads:
+- Pranjal Jain: 4pranjaljain@gmail.com
+- Deeptarka Dey: deeptarkadey29@gmail.com
+- Vishnu Srigiriraju: vishnu.srigiriraju@gmail.com`,
 
         'Codeundrum.txt': `CODEUNDRUM Event Information
 
 Theme: Competitive Coding
 Grades: 9-12
-Type: Solo
-Prize: $10,000
+Type: Solo Event
+Registration Limit: 5 participants per school
 
-Rounds:
-Level 1: Cornered! - Exception handling challenges
-Level 2: Executed! - Advanced problem solving
+What is CODEUNDRUM?
+The ultimate coding gladiator arena where problem-solving prowess meets algorithmic artistry. Navigate through two intense rounds: "Cornered!" tests your exception-handling skills, while "Executed!" pushes your problem-solving limits with advanced challenges.
 
-Supported Languages: Python, Java, C, C++
-
-This is the ultimate competitive programming challenge where individual participants face increasingly difficult algorithmic problems. The first round focuses on robust error handling and edge cases, while the second round tests advanced algorithmic thinking and optimization skills.
-
-Challenge Types:
-- Data structures and algorithms
-- Dynamic programming
-- Graph theory
-- String manipulation
-- Mathematical problems
-- Time and space complexity optimization
-
-Skills Required:
-- Strong problem-solving abilities
-- Algorithmic thinking
-- Code optimization
-- Debugging skills
-- Time management
-
-Registration: Now Open
-Format: Online Judge System
-Duration: 3 hours per round
-Platform: HackerRank/CodeChef style interface`,
+Event Heads:
+- Aman Kumar: amankmr8050@gmail.com
+- Arvind Shivaswamy: Arvind3108work@gmail.com`,
 
         'Cyphranexus.txt': `CYPHRANEXUS Event Information
 
 Theme: Cryptography and Puzzle Solving
 Grades: 9-12
 Type: Team (2 members, must include 1 Grade 12 student)
-Prize: $7,000
+Registration Limit: 8 teams in total; first-come, first-serve basis
+Prerequisites: Basic idea of a Book Cipher (Example: Beale Ciphers)
 
-Skills Required:
-- Book ciphers and classical cryptography
-- Trail-following and clue interpretation
-- Mathematical puzzle solving
-- Pattern recognition
-- Historical cipher knowledge
+What is CYPHRANEXUS?
+Find the Key, Follow the Trail, Decipher! Be ready to engage in mind-bending puzzles and to perceive meaningful connections between seemingly unrelated things. Participants will use their expertise in technology and their problem-solving abilities to decrypt a powerful message, all while racing against the clock.
 
-Challenge Types:
-- Caesar and Substitution ciphers
-- Beale Cipher-based riddles
-- Steganography challenges
-- Hash function puzzles
-- Digital signature verification
-- Modern cryptographic protocols
-
-Example Challenge: Beale Cipher-based riddles
-Teams will navigate through a series of interconnected cryptographic puzzles, each revealing clues to the next challenge. This event combines historical ciphers with modern cryptographic concepts.
-
-Equipment Needed:
-- Calculators
-- Reference materials
-- Notebooks for working
-- Basic programming knowledge helpful
-
-Team Formation Deadline: 11 July 2025
-Event Date: July 18, 2025`,
+Event Heads:
+- Aditya Kathait: kathaitaditya12@gmail.com
+- Riya Shivram: riya.shivram@gmail.com`,
 
         'HighStakes.txt': `HIGH STAKES Event Information
 
-Theme: Strategy Card Games
+Theme: Card-based Strategy Games
 Grades: 10-12
-Type: Solo
-Prize: $5,000
+Type: Solo Event
+Team Size: 2 participants per school (individual participation)
+Registration Limit: 7 teams in total; first-come, first-serve basis
+Equipment: Event will be conducted at the school computer lab
 
-Game Types:
-- Poker variants
-- Blackjack strategy
-- Custom card games
-- Probability-based challenges
+What is HIGH STAKES?
+Step into the exhilarating world of High Stakes! A thrilling multi-round strategy-based event that blends timeless classics with smart risk-taking. Participants will battle it out through various card related chance games. With credits at stake and eliminations at every turn, only the sharpest minds will survive till the end.
 
-Skills Required:
-- Mathematical probability
-- Risk assessment
-- Strategic thinking
-- Decision making under pressure
-- Bluffing and psychology
-
-Challenge Structure:
-- Multiple rounds of different card games
-- Elimination-style tournament
-- Final table with top performers
-- Real-time strategy adjustments
-
-Judging Criteria:
-- Consistency across games
-- Strategic decision making
-- Adaptability to new game rules
-- Mathematical accuracy
-- Risk management
-
-Registration: Open
-Format: Tournament style
-Duration: 4 hours
-No prior card game experience required - rules will be explained`,
+Event Heads:
+- Anshuman Kesavan: anshuman.s.kesavan@gmail.com
+- Tejaas Muthukumar: tejaas08@gmail.com
+- Goutham Ramanathan: gouthamramanathan1234@gmail.com`,
 
         'BreakingVirtual.txt': `BREAKING VIRTUAL Event Information
 
-Theme: VR + Real-world Puzzles
+Theme: Mystery Game with Tech Twist
 Grades: 9-12
-Type: Team (4 members)
-Prize: $9,000
+Type: Team Event (4 members per team)
+Registration Limit: 1 team per school
+Equipment: Usage of any devices except those given by organisers is not permitted
 
-Challenge Components:
-- Virtual Reality escape rooms
-- Physical puzzle solving
-- Mixed reality challenges
-- Collaborative problem solving
+What is BREAKING VIRTUAL?
+A mystery game with a tech twist! You'll start by digging through clues hidden on USB drives and inside a computer to figure out a secret code. Then, you'll jump into a virtual world where one teammate (blindfolded!) has to shoot the right targets-while the rest of you guide them with your voice. Finally, your team will battle it out using computers and real-world games to beat the final stage.
 
-Skills Required:
-- Spatial reasoning
-- Teamwork and communication
-- Adaptability to VR environments
-- Logical thinking
-- Physical dexterity
-
-Equipment Provided:
-- VR headsets and controllers
-- Physical puzzle components
-- Mixed reality interfaces
-- Collaboration tools
-
-Challenge Types:
-- 3D maze navigation
-- Object manipulation in VR
-- Pattern recognition across realities
-- Time-based challenges
-- Coordination between virtual and physical spaces
-
-Team Roles:
-- VR Navigator
-- Physical Puzzle Solver
-- Coordinator/Communication
-- Strategy/Analysis
-
-Registration: Open
-Format: Progressive challenges
-Duration: 3 hours
-Team formation deadline: July 11, 2025`,
+Event Heads:
+- Srijon Sarkar: srijons023@gmail.com
+- Gautham Karthik: gautham797@gmail.com
+- Pranav Karthikeyan: pranav24ss64@gmail.com
+- Anush Rao: anushrao07@gmail.com
+- Akshar Damodar: akshardamodar47@gmail.com`,
 
         'GeometryDash.txt': `GEOMETRY DASH Event Information
 
-Theme: Robotics & Arduino
+Theme: Arduino Programming & Robotics
 Grades: 9-12
-Type: Team (3 members)
-Prize: $8,500
+Type: Team Event (3 members per team)
+Registration Limit: 1 team per school
+Time Limit: Ten-minute coding sprint
 
-Challenge: Build and program robots to navigate obstacle courses
+What is GEOMETRY DASH?
+Geometry Dash challenges each team to transform pure Python logic into flawless motion. In a ten-minute coding sprint, participants will program an Arduino line-tracing rover to replicate intricate geometric figures with speed and precision. External references are prohibited; only algorithmic insight decides the outcome.
 
-Skills Required:
-- Arduino programming
-- Sensor integration
-- Mechanical design
-- Problem-solving
-- Electronics knowledge
-
-Components Provided:
-- Arduino boards
-- Sensors (ultrasonic, light, touch)
-- Motors and servos
-- Structural materials
-- Basic tools
-
-Challenge Types:
-- Line following
-- Obstacle avoidance
-- Object pickup and placement
-- Maze navigation
-- Speed challenges
-
-Programming Languages:
-- C++ (Arduino IDE)
-- Python (for advanced features)
-- Block-based programming available
-
-Team Roles:
-- Programmer
-- Hardware Designer
-- Strategist/Tester
-
-Registration: Open
-Format: Build and compete
-Duration: 5 hours
-Materials provided, but teams can bring additional components`,
+Event Heads:
+- Arjun Sinha: arjun@iqlect.com
+- Nihaar S: nihaars@hotmail.com`,
 
         'Sonaria.txt': `SONARIA Event Information
 
-Theme: Tech Music & Visual Art
+Theme: Tech-Themed Music + Visual Art
 Grades: 9-12
-Type: Team (6-8 members)
-Prize: $6,000
+Type: Team Event (6-8 members per team)
+Roles: 2 members for graphic design and the rest in singing
+Registration Limit: 8 teams in total; first-come, first-serve basis
 
-Challenge: Create multimedia performances combining technology, music, and visual art
+What is SONARIA?
+Sonaria is a unique and electrifying event that fuses the worlds of technology, music, and design. Participants must bring both cyber knowledge and musical flair to the stage. Each team is split into two groups: one group crafts a clever parody of a popular song, using cyber topics ranging from cybersecurity to technology. The other group must transform the song into a visually striking poster.
 
-Skills Required:
-- Music production
-- Visual arts/animation
-- Programming (optional)
-- Creative collaboration
-- Performance skills
-
-Categories:
-- Digital music composition
-- Visual art creation
-- Interactive installations
-- Live performance
-- Technology integration
-
-Tools Available:
-- Digital Audio Workstations
-- Graphics/Animation software
-- Projection equipment
-- Sound systems
-- Programming environments
-
-Judging Criteria:
-- Creativity and originality
-- Technical execution
-- Artistic merit
-- Collaboration quality
-- Audience engagement
-
-Team Composition:
-- Musicians/Composers
-- Visual Artists
-- Technical/Programming support
-- Performance coordinators
-
-Registration: Open
-Format: Create and perform
-Duration: 6 hours
-Final performances in the evening`,
-
-        'Events_List.txt': `CYBERNAUTICA 2024 Events Overview
-
-1. CODEUNDRUM - Competitive Coding
-   Solo event for grades 9-12
-   
-2. HACKADEMIA - AI for Education  
-   Team event (2-3 members) for grades 9-12
-   
-3. CYPHRANEXUS - Cryptography & Puzzles
-   Team event (2 members) for grades 9-12
-   
-4. HIGH STAKES - Strategy Card Games
-   Solo event for grades 10-12
-   
-5. BREAKING VIRTUAL - VR + Real-world Puzzles
-   Team event (4 members) for grades 9-12
-   
-6. GEOMETRY DASH - Robotics & Arduino
-   Team event (3 members) for grades 9-12
-   
-7. SONARIA - Tech Music & Visual Art
-   Team event (6-8 members) for grades 9-12
-
-Total Prize Pool: $50,000
-Registration Deadline: July 11, 2025
-Event Dates: July 18, 2025`,
-
-        'Registration_Info.txt': `CYBERNAUTICA Registration Information
-
-How to Register:
-1. Visit cybernautica.org/register
-2. Select your events
-3. Form teams (where applicable)
-4. Submit required documents
-5. Pay registration fee ($25 per participant)
-
-Required Documents:
-- Student ID verification
-- Parental consent (for minors)
-- Team formation agreement (team events)
-
-
-
-Contact: 
-Email: events@npshsr.com
-Phone: 7975796436
-Discord: discord.gg/cybernautica`
+Event Heads:
+- Nishka Rao: nishkarao01@gmail.com
+- Nimisha Srivastava: nimishasrivastava220@gmail.com
+- Sumaira Shantanu: sumaira.shantanu@gmail.com`
       },
-      'Readme.txt': 'Welcome to the CYBERNAUTICA file system! Explore the Events folder to learn about our hackathon competitions.'
     },
-    'Desktop': {
-      'Welcome.txt': 'Welcome to CYBERNAUTICA OS! This is your personal desktop space.'
-    },
-    'Downloads': {
-      'sample.txt': 'This is a sample downloaded file.'
-    },
-    '.bashrc': '# CYBERNAUTICA Bash Configuration\nexport PS1="\\u@cybernautica:\\w$ "\nalias ll="ls -la"\nalias hack="echo \'Hacking in progress...\'"',
-    '.profile': '# User profile for CYBERNAUTICA OS\necho "Welcome to the future, $(whoami)!"'
+    'etc': {},
+    'bin': {},
+    'tmp': {},
+    'var': {
+      'log': {}
+    }
   }
 };
 
@@ -347,53 +133,45 @@ export function getFileSystem(): FileSystemNode {
 }
 
 export function getCurrentDirectory(path: string): FileSystemNode | null {
-  const parts = path === '~' ? [] : path.split('/').filter(p => p && p !== '~');
-  let current: FileSystemNode | string = fileSystem['~'];
+  const parts = path.split('/').filter(part => part !== '');
+  let current = fileSystem;
   
   for (const part of parts) {
-    if (typeof current === 'string' || !current[part]) {
-      return null;
-    }
+    if (part === '~') continue;
+    if (typeof current === 'string') return null;
+    if (!(part in current)) return null;
     current = current[part];
   }
   
-  return typeof current === 'object' ? current : null;
+  return current;
 }
 
 export function getFile(currentPath: string, filename: string): string | null {
-  const dir = getCurrentDirectory(currentPath);
-  if (!dir || !dir[filename] || typeof dir[filename] !== 'string') {
-    return null;
-  }
-  return dir[filename] as string;
+  const current = getCurrentDirectory(currentPath);
+  if (!current || typeof current === 'string') return null;
+  
+  const file = current[filename];
+  return typeof file === 'string' ? file : null;
 }
 
 export function changeDirectory(currentPath: string, newPath: string): string | null {
-  if (newPath === '~' || newPath === '/') {
-    return '~';
+  // Handle absolute paths
+  if (newPath.startsWith('/')) {
+    const target = getCurrentDirectory(newPath);
+    return target && typeof target !== 'string' ? newPath : null;
   }
   
+  // Handle relative paths
   if (newPath === '..') {
-    if (currentPath === '~') {
-      return '~'; // Can't go above home
-    }
-    const parts = currentPath.split('/').filter(p => p);
-    if (parts.length <= 1) {
-      return '~';
-    }
+    const parts = currentPath.split('/').filter(part => part !== '');
+    if (parts.length <= 1) return '/~';
     parts.pop();
-    return parts.length === 0 ? '~' : '/' + parts.join('/');
+    return '/' + parts.join('/');
   }
   
-  // Handle relative path
-  let targetPath = currentPath;
-  if (currentPath === '~') {
-    targetPath = '/' + newPath;
-  } else {
-    targetPath = currentPath + '/' + newPath;
-  }
+  if (newPath === '.') return currentPath;
   
-  // Check if directory exists
-  const dir = getCurrentDirectory(targetPath);
-  return dir ? targetPath : null;
+  const targetPath = currentPath === '/~' ? `/~/${newPath}` : `${currentPath}/${newPath}`;
+  const target = getCurrentDirectory(targetPath);
+  return target && typeof target !== 'string' ? targetPath : null;
 }

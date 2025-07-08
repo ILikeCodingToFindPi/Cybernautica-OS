@@ -78,7 +78,16 @@ export default function Desktop() {
   };
 
   return (
-    <div className="h-screen w-full relative">
+    <div className="h-screen w-full relative" style={{
+      backgroundImage: 'url("/attached_assets/tmp_e69375cb-a5fc-4c7f-a0bb-0b09e42eaaf4_1751974263538.png")',
+      backgroundSize: 'contain',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed'
+    }}>
+      {/* Background overlay for readability */}
+      <div className="absolute inset-0 bg-black/70 z-0"></div>
+      
       {/* Top Bar */}
       <div className="fixed top-0 left-0 right-0 cyber-glass z-30 px-4 py-2 flex justify-between items-center">
         <div className="flex items-center space-x-4">
@@ -197,7 +206,7 @@ export default function Desktop() {
           </div>
         </div>
         
-        {/* Desktop Icons */}
+        {/* Desktop Icons - System Apps */}
         <div className="absolute top-24 left-8 space-y-4 z-10">
           <div 
             className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
@@ -239,21 +248,25 @@ export default function Desktop() {
             </div>
             <span className="text-xs mt-2 text-center font-medium">Settings</span>
           </div>
-
-          {/* Installed Event Apps */}
-          {windowManager.installedApps.map((app) => (
-            <div 
-              key={app.id}
-              className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
-              onClick={() => windowManager.createWindow(app.type as any, `${app.name} - Event Details`)}
-            >
-              <div className={`w-12 h-12 bg-${app.color}/20 rounded-xl flex items-center justify-center group-hover:bg-${app.color}/40 transition-all group-hover:shadow-lg group-hover:shadow-${app.color}/30`}>
-                <i className={`${app.icon} text-xl text-${app.color}`}></i>
-              </div>
-              <span className="text-xs mt-2 text-center font-medium">{app.name}</span>
-            </div>
-          ))}
         </div>
+
+        {/* Event Apps Row */}
+        {windowManager.installedApps.length > 0 && (
+          <div className="absolute top-24 left-32 grid grid-cols-4 gap-4 z-10">
+            {windowManager.installedApps.map((app) => (
+              <div 
+                key={app.id}
+                className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
+                onClick={() => windowManager.createWindow(app.type as any, `${app.name} - Event Details`)}
+              >
+                <div className={`w-12 h-12 bg-${app.color}/20 rounded-xl flex items-center justify-center group-hover:bg-${app.color}/40 transition-all group-hover:shadow-lg group-hover:shadow-${app.color}/30`}>
+                  <i className={`${app.icon} text-xl text-${app.color}`}></i>
+                </div>
+                <span className="text-xs mt-2 text-center font-medium">{app.name}</span>
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* Windows */}
         <div className="absolute inset-0 pt-16 pb-20">
