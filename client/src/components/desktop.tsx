@@ -14,12 +14,41 @@ import SonariaApp from "@/components/events/sonaria-app";
 
 export default function Desktop() {
   const [currentTime, setCurrentTime] = useState(new Date());
+  const [timeLeft, setTimeLeft] = useState<{
+    days: number;
+    hours: number;
+    minutes: number;
+    seconds: number;
+  } | null>(null);
   const windowManager = useWindowManager();
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const targetDate = new Date("2025-07-18T10:00:00+05:30"); // 10:00 AM IST on July 25th, 2025
+
+    const updateTimes = () => {
       setCurrentTime(new Date());
-    }, 1000);
+
+      const now = new Date();
+      const difference = targetDate.getTime() - now.getTime();
+
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60),
+        );
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        setTimeLeft({ days, hours, minutes, seconds });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    updateTimes();
+    const interval = setInterval(updateTimes, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -82,7 +111,7 @@ export default function Desktop() {
       className="h-screen w-full relative"
       style={{
         backgroundImage:
-          'url("https://th.bing.com/th/id/OIP.7qW-ZZfZCiuxsbk7EiGxtgAAAA?w=151&h=176&c=7&r=0&o=7&pid=1.7&rm=3")',
+          'url("https://drive.google.com/thumbnail?id=12LT96_XXBbJsTOyhBRlrejkX0YeQXTRr")',
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
@@ -90,25 +119,17 @@ export default function Desktop() {
       }}
     >
       {/* Background overlay for readability */}
-      <div className="absolute inset-0 bg-black/70 z-0"></div>
+      <div className="absolute inset-0 bg-black/60 z-0"></div>
 
       {/* Top Bar */}
       <div className="fixed top-0 left-0 right-0 cyber-glass z-30 px-4 py-2 flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-3">
-            <img
-              src="/attached_assets/tmp_e69375cb-a5fc-4c7f-a0bb-0b09e42eaaf4_1751974263538.png"
-              alt="Cybernautica Logo"
-              className="w-8 h-8 object-contain logo-header"
-            />
+
             <div className="text-cyber-cyan font-display font-bold">
               CYBERNAUTICA
             </div>
-            <img
-              src="/attached_assets/image_1751974288082.png"
-              alt="School Logo"
-              className="w-8 h-8 object-contain logo-header"
-            />
+
           </div>
           <div className="flex space-x-2">
             <button className="text-xs text-gray-400 hover:text-cyber-cyan transition-colors">
@@ -136,6 +157,25 @@ export default function Desktop() {
 
       {/* Desktop */}
       <div className="pt-16 p-8 h-full relative">
+        {/* Countdown Display on the Right */}
+        <div className="countdown-widget absolute right-8 top-16 bg-gray-800 bg-opacity-80 p-4 rounded-lg shadow-lg z-10">
+          {timeLeft && (
+            <div className="text-2xl text-bold text-white">
+              <span className="font-semibold">Event in: </span>
+              <span>
+                {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m{" "}
+                {timeLeft.seconds}s
+              </span>
+            </div>
+          )}
+        </div>
+        <div className="absolute right-8 top-36 bg-cyber-cyan/10 backdrop-blur-md border border-cyber-cyan/30 text-white text-sm px-4 py-2 rounded-lg shadow-lg z-10">
+          <div className="font-semibold text-cyber-cyan mb-1">📍 Venue</div>
+          <div>NPSHSR Auditorium</div>
+          <div className="mt-2 font-semibold text-cyber-cyan">📅 Date</div>
+          <div>18th July 2025</div>
+        </div>
+
         {/* Desktop Background */}
         <div className="absolute inset-0 cyber-wallpaper">
           {/* Main wallpaper layer */}

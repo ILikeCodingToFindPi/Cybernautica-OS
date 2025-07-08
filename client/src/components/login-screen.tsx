@@ -24,19 +24,11 @@ export default function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
       <div className="cyber-glass rounded-2xl p-8 w-96 window-shadow">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center space-x-4 mb-4">
-            <img 
-              src="/attached_assets/tmp_e69375cb-a5fc-4c7f-a0bb-0b09e42eaaf4_1751974263538.png" 
-              alt="Cybernautica Logo" 
-              className="w-12 h-12 object-contain"
-            />
+            
             <h1 className="text-3xl font-display font-bold text-cyber-cyan neon-text">
               CYBERNAUTICA
             </h1>
-            <img 
-              src="/attached_assets/image_1751974288082.png" 
-              alt="School Logo" 
-              className="w-12 h-12 object-contain"
-            />
+            
           </div>
           <p className="text-gray-400 mt-2">Secure Access Terminal</p>
         </div>

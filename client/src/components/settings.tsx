@@ -12,7 +12,11 @@ export default function Settings() {
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center space-x-4">
             <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-              <School className="w-8 h-8 text-white" />
+              <img 
+                src="https://th.bing.com/th/id/OIP.7qW-ZZfZCiuxsbk7EiGxtgAAAA?w=151&h=176&c=7&r=0&o=7&pid=1.7&rm=3" 
+                alt="School Logo" 
+                className="w-12 h-12 object-contain"
+              />
             </div>
             <div>
               <h1 className="text-3xl font-bold text-cyber-cyan">SYSTEM SETTINGS</h1>
@@ -20,15 +24,11 @@ export default function Settings() {
             </div>
           </div>
           <div className="flex items-center space-x-3">
+            
             <img 
-              src="/attached_assets/image_1751974288082.png" 
-              alt="School Logo" 
-              className="w-12 h-12 object-contain"
-            />
-            <img 
-              src="/attached_assets/tmp_e69375cb-a5fc-4c7f-a0bb-0b09e42eaaf4_1751974263538.png" 
+              src="https://drive.google.com/thumbnail?id=12LT96_XXBbJsTOyhBRlrejkX0YeQXTRr" 
               alt="Cybernautica Logo" 
-              className="w-12 h-12 object-contain"
+              className="w-20 h-20 object-contain"
             />
           </div>
         </div>
@@ -143,9 +143,9 @@ export default function Settings() {
                       <ul className="text-sm text-gray-300 space-y-1">
                         <li>• Modern Computer Labs</li>
                         <li>• Science & Innovation Center</li>
-                        <li>• Digital Library</li>
-                        <li>• Sports Complex</li>
-                        <li>• Auditorium & Conference Halls</li>
+                        
+                       
+                        <li>• Auditoriums</li>
                       </ul>
                     </div>
 

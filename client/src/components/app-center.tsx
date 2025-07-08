@@ -34,9 +34,9 @@ export default function AppCenter() {
           </div>
         </div>
         <img 
-          src="/attached_assets/image_1751974288082.png" 
+          src="https://th.bing.com/th/id/OIP.7qW-ZZfZCiuxsbk7EiGxtgAAAA?w=151&h=176&c=7&r=0&o=7&pid=1.7&rm=3" 
           alt="School Logo" 
-          className="w-12 h-12 object-contain"
+          className="w-20 h-20 object-contain"
         />
       </div>
 
