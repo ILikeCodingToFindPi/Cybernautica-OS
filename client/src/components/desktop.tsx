@@ -72,7 +72,19 @@ export default function Desktop() {
       {/* Top Bar */}
       <div className="fixed top-0 left-0 right-0 cyber-glass z-30 px-4 py-2 flex justify-between items-center">
         <div className="flex items-center space-x-4">
-          <div className="text-cyber-cyan font-display font-bold">CYBERNAUTICA</div>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/assets/cybernautica-logo.png" 
+              alt="Cybernautica Logo" 
+              className="w-8 h-8 object-contain logo-header"
+            />
+            <div className="text-cyber-cyan font-display font-bold">CYBERNAUTICA</div>
+            <img 
+              src="/assets/school-logo.png" 
+              alt="School Logo" 
+              className="w-8 h-8 object-contain logo-header"
+            />
+          </div>
           <div className="flex space-x-2">
             <button className="text-xs text-gray-400 hover:text-cyber-cyan transition-colors">
               Activities
@@ -101,8 +113,17 @@ export default function Desktop() {
           {/* Main wallpaper layer */}
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/40 to-slate-900"></div>
           
+          {/* Event logo backdrop */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-15">
+            <img 
+              src="/assets/cybernautica-logo.png" 
+              alt="Cybernautica Logo" 
+              className="w-96 h-96 object-contain logo-backdrop"
+            />
+          </div>
+          
           {/* Cybernautica themed wallpaper */}
-          <div className="absolute inset-0 opacity-60">
+          <div className="absolute inset-0 opacity-40">
             <div className="h-full w-full bg-gradient-to-br from-cyber-dark via-purple-900/30 to-cyber-dark" style={{
               backgroundImage: `
                 radial-gradient(circle at 25% 25%, rgba(0, 245, 255, 0.15) 0%, transparent 40%),

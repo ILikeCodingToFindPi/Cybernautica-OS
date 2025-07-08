@@ -134,6 +134,28 @@ export default function AppCenter() {
         </div>
       </div>
 
+      {/* App Center Header */}
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center space-x-4">
+          <div className="w-16 h-16 bg-gradient-to-br from-cyber-cyan to-cyber-green rounded-lg flex items-center justify-center">
+            <img 
+              src="/assets/cybernautica-logo.png" 
+              alt="Cybernautica Logo" 
+              className="w-10 h-10 object-contain"
+            />
+          </div>
+          <div>
+            <h1 className="text-3xl font-bold text-cyber-cyan">CYBERNAUTICA CENTRAL</h1>
+            <p className="text-gray-400">Event Applications & Information Hub</p>
+          </div>
+        </div>
+        <img 
+          src="/assets/school-logo.png" 
+          alt="School Logo" 
+          className="w-12 h-12 object-contain"
+        />
+      </div>
+
       {/* Events Grid */}
       <div className="flex-1 p-6 overflow-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -151,9 +173,9 @@ export default function AppCenter() {
                   {event.type}
                 </span>
               </div>
-              
+
               <p className="text-gray-400 text-sm mb-3">{event.theme}</p>
-              
+
               <div className="space-y-2 text-xs mb-4">
                 <div>
                   <span className="text-cyber-cyan">Grades:</span> {event.grades}
@@ -169,9 +191,9 @@ export default function AppCenter() {
                   </div>
                 )}
               </div>
-              
+
               <p className="text-gray-300 text-xs mb-4">{event.description}</p>
-              
+
               <div className="flex space-x-2">
                 <Button
                   onClick={() => launchEventApp(event)}

@@ -25,13 +25,13 @@ export default function BootScreen({ onComplete }: BootScreenProps) {
     const interval = setInterval(() => {
       setBootTime(prev => {
         const newTime = prev + 0.1;
-        
+
         // Add new log every 0.5 seconds
         if (currentLogIndex < bootLogs.length && newTime >= (currentLogIndex + 1) * 0.5) {
           setDisplayedLogs(prev => [...prev, bootLogs[currentLogIndex]]);
           setCurrentLogIndex(prev => prev + 1);
         }
-        
+
         // Complete boot after 5 seconds
         if (newTime >=3.0) {
           clearInterval(interval);
@@ -39,7 +39,7 @@ export default function BootScreen({ onComplete }: BootScreenProps) {
             onComplete();
           }, 1000);
         }
-        
+
         return newTime;
       });
     }, 100);
@@ -67,11 +67,19 @@ export default function BootScreen({ onComplete }: BootScreenProps) {
           ))}
         </div>
         <div className="mt-8">
+          <div className="flex items-center justify-center mb-6">
+            <img 
+              src="/assets/cybernautica-logo.png" 
+              alt="Cybernautica Logo" 
+              className="w-16 h-16 object-contain animate-spin"
+              style={{ animationDuration: '8s' }}
+            />
+          </div>
           <div className="text-2xl font-display neon-text text-cyber-cyan">
             <div>╔═══════════════════════════════════════╗</div>
             <div>║        CYBERNAUTICA OS v2.1.0        ║</div>
             <div>║     Advanced Hacking Environment     ║</div>
-            <div>╚═══════════════════════════════════════╝</div>
+            <div>╚═════════════════════════════════════════╝</div>
           </div>
         </div>
       </div>

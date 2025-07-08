@@ -19,9 +19,18 @@ export default function Settings() {
               <p className="text-gray-400">NPSHSR - CYBERNAUTICA OS</p>
             </div>
           </div>
-          <Badge variant="secondary" className="bg-cyber-green/20 text-cyber-green border-cyber-green/30">
-            v2025.1.0
-          </Badge>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/assets/school-logo.png" 
+              alt="School Logo" 
+              className="w-12 h-12 object-contain"
+            />
+            <img 
+              src="/assets/cybernautica-logo.png" 
+              alt="Cybernautica Logo" 
+              className="w-12 h-12 object-contain"
+            />
+          </div>
         </div>
 
         <Tabs defaultValue="general" className="w-full">
@@ -123,7 +132,7 @@ export default function Settings() {
                         <li>• CBSE Board Affiliation</li>
                         <li>• Classes KG to XII</li>
                         <li>• Science, Commerce & Humanities</li>
-                        
+
                       </ul>
                     </div>
                   </div>
@@ -142,7 +151,7 @@ export default function Settings() {
 
                     <div>
 
-                      
+
                     </div>
                   </div>
                 </div>
@@ -202,7 +211,7 @@ export default function Settings() {
                     <div>
                       <p className="font-semibold">Phone</p>
                       <p className="text-sm text-gray-300">+91 80 - 2572 9406 / 07 / 08 </p>
-                      
+
                     </div>
                   </div>
 
@@ -211,7 +220,7 @@ export default function Settings() {
                     <div>
                       <p className="font-semibold">Email</p>
                       <p className="text-sm text-gray-300"> info@npshsr.com</p>
-                      
+
                     </div>
                   </div>
 
@@ -233,14 +242,14 @@ export default function Settings() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="space-y-3">
-                    
+
                   </div>
 
                   <div className="space-y-3">
                     <h4 className="font-semibold text-cyber-pink">Event Coordinators</h4>
                     <div className="space-y-2 text-sm">
-                     
-                      
+
+
                       <p>Tech Team: Deeptarka Dey, Pranjal Jain</p>
                     </div>
                   </div>
@@ -285,10 +294,10 @@ export default function Settings() {
                          <li>• Megha </li>   
                          <li>• Anaika </li>   
                          <li>• Prithvi </li>   
-                        
-                        
-                        
-                        
+
+
+
+
                       </ul>
                     </div>
                     <div className="space-y-2">
@@ -296,8 +305,8 @@ export default function Settings() {
                       <ul className="text-sm text-gray-300 space-y-1">
                         <li>• React & TypeScript</li>
                         <li>• Modern Web Technologies</li>
-                        
-                        
+
+
                       </ul>
                     </div>
                   </div>
@@ -314,7 +323,7 @@ export default function Settings() {
                       <div className="text-2xl font-bold text-cyber-cyan">300+</div>
                       <div className="text-xs text-gray-400">Participants</div>
                     </div>
-                    
+
                     <div className="text-center p-3 bg-slate-900/50 rounded">
                       <div className="text-2xl font-bold text-cyber-yellow">4</div>
                       <div className="text-xs text-gray-400">Hours Total</div>
