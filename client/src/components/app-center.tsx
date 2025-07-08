@@ -19,39 +19,38 @@ export default function AppCenter() {
 
   const installAppMutation = useMutation({
     mutationFn: async (event: Event) => {
-      // Add to local installed apps immediately (optimistic update)
-      windowManager.addInstalledApp({
-        id: event.id,
-        name: event.name,
-        type: getEventAppType(event.name),
-        icon: getEventIcon(event),
-        color: event.color
-      });
-
       const response = await fetch("/api/installed-apps", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userId: 1, eventId: event.id }),
       });
       if (!response.ok) {
-        // Remove from local state if API call fails
-        windowManager.removeInstalledApp(event.id);
         throw new Error("Failed to install app");
       }
-      
       return { event, response: await response.json() };
     },
+
+    onMutate: async (event: Event) => {
+      await queryClient.cancelQueries({ queryKey: ["/api/users/1/installed-apps"] });
+      windowManager.addInstalledApp({
+        id: event.id,
+        name: event.name,
+        type: getEventAppType(event.name),
+        icon: getEventIcon(event),
+        color: event.color,
+      });
+    },
+
     onSuccess: (data) => {
-      const { event } = data;
-      
       toast({
         title: "App Installed",
-        description: `${event.name} has been added to your desktop!`,
+        description: `${data.event.name} has been added to your desktop!`,
       });
-      
       queryClient.invalidateQueries({ queryKey: ["/api/users/1/installed-apps"] });
     },
-    onError: () => {
+
+    onError: (err, event) => {
+      windowManager.removeInstalledApp(event.id);
       toast({
         title: "Installation Failed",
         description: "Could not install the event app.",
@@ -134,7 +133,6 @@ export default function AppCenter() {
 
   return (
     <div className="h-full flex flex-col">
-      {/* Live Announcements Ticker */}
       <div className="bg-cyber-cyan/10 border-b border-cyber-cyan/30 px-4 py-2">
         <div className="flex items-center space-x-2">
           <i className="fas fa-bullhorn text-cyber-cyan"></i>
@@ -151,7 +149,6 @@ export default function AppCenter() {
         </div>
       </div>
 
-      {/* App Center Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-4">
           <div className="w-16 h-16 bg-gradient-to-br from-cyber-cyan to-cyber-green rounded-lg flex items-center justify-center">
@@ -173,7 +170,6 @@ export default function AppCenter() {
         />
       </div>
 
-      {/* Events Grid */}
       <div className="flex-1 p-6 overflow-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {events.map((event: Event) => (
