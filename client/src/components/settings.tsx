@@ -75,9 +75,9 @@ export default function Settings() {
                   <h4 className="font-semibold text-cyber-cyan">Event Status</h4>
                   <div className="grid grid-cols-1 gap-2">
                     {[
-                      { name: "CODEUNDRUM", status: "Live", color: "cyber-green" },
-                      { name: "HACKADEMIA", status: "Live", color: "cyber-green" },
-                      { name: "CYPHRANEXUS", status: "Starting Soon", color: "cyber-yellow" },
+                      { name: "CODEUNDRUM", status: "Upcoming", color: "cyber-pink" },
+                      { name: "HACKADEMIA", status: "Upcoming", color: "cyber-pink" },
+                      { name: "CYPHRANEXUS", status: "Upcoming", color: "cyber-pink" },
                       { name: "HIGH STAKES", status: "Upcoming", color: "cyber-pink" },
                       { name: "BREAKING VIRTUAL", status: "Upcoming", color: "cyber-pink" },
                       { name: "GEOMETRY DASH", status: "Upcoming", color: "cyber-pink" },
