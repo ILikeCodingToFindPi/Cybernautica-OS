@@ -57,18 +57,24 @@ export function useWindowManager() {
   }, []);
 
   const createWindow = useCallback((type: Window["type"], title: string) => {
+    const isMobile = window.innerWidth < 640; // sm breakpoint
+    const defaultSize = getDefaultSize(type);
+    
     const newWindow: Window = {
       id: `${type}-${Date.now()}`,
       type,
       title,
       position: {
-        x: Math.random() * 200 + 100,
-        y: Math.random() * 100 + 100,
+        x: isMobile ? 10 : Math.random() * 200 + 100,
+        y: isMobile ? 80 : Math.random() * 100 + 100,
       },
-      size: getDefaultSize(type),
+      size: isMobile ? {
+        width: Math.min(defaultSize.width, window.innerWidth - 20),
+        height: Math.min(defaultSize.height, window.innerHeight - 120)
+      } : defaultSize,
       zIndex: nextZIndex,
       isMinimized: false,
-      isMaximized: false,
+      isMaximized: isMobile ? true : false, // Auto-maximize on mobile
     };
 
     setWindows(prev => [...prev, newWindow]);
@@ -131,6 +137,15 @@ export function useWindowManager() {
 }
 
 function getDefaultSize(type: Window["type"]): { width: number; height: number } {
+  const isMobile = window.innerWidth < 640;
+  
+  if (isMobile) {
+    return {
+      width: window.innerWidth - 20,
+      height: window.innerHeight - 120
+    };
+  }
+  
   switch (type) {
     case "terminal":
       return { width: 800, height: 500 };

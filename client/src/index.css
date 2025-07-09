@@ -151,6 +151,31 @@
     animation: gradient 15s ease infinite;
   }
 
+  /* Mobile responsive improvements */
+  @media (max-width: 640px) {
+    .cyber-glass {
+      backdrop-filter: blur(8px);
+    }
+    
+    .window-shadow {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+    
+    .desktop-icon {
+      transform: none !important;
+    }
+    
+    .desktop-icon:hover {
+      transform: none !important;
+      background: rgba(255, 255, 255, 0.15);
+    }
+    
+    body {
+      overflow: hidden;
+      touch-action: pan-x pan-y;
+    }
+  }
+
   /* Logo styling */
   .logo-header {
     filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.5));

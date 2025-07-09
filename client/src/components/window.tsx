@@ -95,7 +95,7 @@ export default function Window({
   return (
     <div
       ref={windowRef}
-      className={`absolute cyber-glass rounded-lg window-shadow window-enter ${getWindowColor()}`}
+      className={`absolute cyber-glass rounded-lg window-shadow window-enter ${getWindowColor()} max-w-[95vw] max-h-[90vh] sm:max-w-none sm:max-h-none`}
       style={{
         left: window.position.x,
         top: window.position.y,

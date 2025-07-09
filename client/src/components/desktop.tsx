@@ -20,6 +20,7 @@ export default function Desktop() {
     minutes: number;
     seconds: number;
   } | null>(null);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
   const windowManager = useWindowManager();
 
   useEffect(() => {
@@ -122,16 +123,14 @@ export default function Desktop() {
       <div className="absolute inset-0 bg-black/60 z-0"></div>
 
       {/* Top Bar */}
-      <div className="fixed top-0 left-0 right-0 cyber-glass z-30 px-4 py-2 flex justify-between items-center">
-        <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-3">
-
-            <div className="text-cyber-cyan font-display font-bold">
+      <div className="fixed top-0 left-0 right-0 cyber-glass z-30 px-2 sm:px-4 py-2 flex justify-between items-center">
+        <div className="flex items-center space-x-2 sm:space-x-4">
+          <div className="flex items-center space-x-1 sm:space-x-3">
+            <div className="text-cyber-cyan font-display font-bold text-sm sm:text-base">
               CYBERNAUTICA
             </div>
-
           </div>
-          <div className="flex space-x-2">
+          <div className="hidden sm:flex space-x-2">
             <button className="text-xs text-gray-400 hover:text-cyber-cyan transition-colors">
               Activities
             </button>
@@ -139,15 +138,22 @@ export default function Desktop() {
               Applications
             </button>
           </div>
+          {/* Mobile Menu Button */}
+          <button 
+            className="sm:hidden p-2 text-cyber-cyan hover:text-cyber-pink transition-colors"
+            onClick={() => setShowMobileMenu(!showMobileMenu)}
+          >
+            <i className={`fas ${showMobileMenu ? 'fa-times' : 'fa-bars'}`}></i>
+          </button>
         </div>
-        <div className="flex items-center space-x-4">
-          <div className="text-sm">
+        <div className="flex items-center space-x-2 sm:space-x-4">
+          <div className="text-xs sm:text-sm">
             {currentTime.toLocaleTimeString([], {
               hour: "2-digit",
               minute: "2-digit",
             })}
           </div>
-          <div className="flex space-x-2">
+          <div className="flex space-x-1 sm:space-x-2">
             <i className="fas fa-wifi text-cyber-green"></i>
             <i className="fas fa-battery-three-quarters text-cyber-green"></i>
             <i className="fas fa-volume-up text-cyber-green"></i>
@@ -156,20 +162,20 @@ export default function Desktop() {
       </div>
 
       {/* Desktop */}
-      <div className="pt-16 p-8 h-full relative">
-        {/* Countdown Display on the Right */}
-        <div className="countdown-widget absolute right-8 top-16 bg-gray-800 bg-opacity-80 p-4 rounded-lg shadow-lg z-10">
+      <div className="pt-16 p-2 sm:p-8 h-full relative">
+        {/* Countdown Display - Responsive */}
+        <div className="countdown-widget absolute right-2 sm:right-8 top-16 bg-gray-800 bg-opacity-80 p-2 sm:p-4 rounded-lg shadow-lg z-10 max-w-xs sm:max-w-none">
           {timeLeft && (
-            <div className="text-2xl text-bold text-white">
-              <span className="font-semibold">Event in: </span>
-              <span>
+            <div className="text-sm sm:text-2xl text-bold text-white">
+              <span className="font-semibold block sm:inline">Event in: </span>
+              <span className="block sm:inline">
                 {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m{" "}
                 {timeLeft.seconds}s
               </span>
             </div>
           )}
         </div>
-        <div className="absolute right-8 top-36 bg-cyber-cyan/10 backdrop-blur-md border border-cyber-cyan/30 text-white text-sm px-4 py-2 rounded-lg shadow-lg z-10">
+        <div className="absolute right-2 sm:right-8 top-32 sm:top-36 bg-cyber-cyan/10 backdrop-blur-md border border-cyber-cyan/30 text-white text-xs sm:text-sm px-2 sm:px-4 py-2 rounded-lg shadow-lg z-10 max-w-xs">
           <div className="font-semibold text-cyber-cyan mb-1">📍 Venue</div>
           <div>NPSHSR Auditorium</div>
           <div className="mt-2 font-semibold text-cyber-cyan">📅 Date</div>
@@ -282,60 +288,60 @@ export default function Desktop() {
           </div>
         </div>
 
-        {/* Desktop Icons - System Apps */}
-        <div className="absolute top-24 left-8 space-y-4 z-10">
+        {/* Desktop Icons - System Apps - Mobile Responsive */}
+        <div className="absolute top-20 sm:top-24 left-2 sm:left-8 grid grid-cols-4 sm:grid-cols-1 gap-2 sm:gap-4 z-10 sm:space-y-0">
           <div
-            className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
+            className="desktop-icon flex flex-col items-center w-16 sm:w-20 p-2 sm:p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
             onClick={openTerminal}
           >
-            <div className="w-12 h-12 bg-cyber-green/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-green/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-green/30">
-              <i className="fas fa-terminal text-xl text-cyber-green"></i>
+            <div className="w-10 sm:w-12 h-10 sm:h-12 bg-cyber-green/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-green/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-green/30">
+              <i className="fas fa-terminal text-lg sm:text-xl text-cyber-green"></i>
             </div>
-            <span className="text-xs mt-2 text-center font-medium">
+            <span className="text-xs mt-1 sm:mt-2 text-center font-medium">
               Terminal
             </span>
           </div>
 
           <div
-            className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
+            className="desktop-icon flex flex-col items-center w-16 sm:w-20 p-2 sm:p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
             onClick={openAppCenter}
           >
-            <div className="w-12 h-12 bg-cyber-cyan/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-cyan/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-cyan/30">
-              <i className="fas fa-th text-xl text-cyber-cyan"></i>
+            <div className="w-10 sm:w-12 h-10 sm:h-12 bg-cyber-cyan/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-cyan/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-cyan/30">
+              <i className="fas fa-th text-lg sm:text-xl text-cyber-cyan"></i>
             </div>
-            <span className="text-xs mt-2 text-center font-medium">
+            <span className="text-xs mt-1 sm:mt-2 text-center font-medium">
               App Center
             </span>
           </div>
 
           <div
-            className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
+            className="desktop-icon flex flex-col items-center w-16 sm:w-20 p-2 sm:p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
             onClick={openFileManager}
           >
-            <div className="w-12 h-12 bg-cyber-yellow/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-yellow/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-yellow/30">
-              <i className="fas fa-folder text-xl text-cyber-yellow"></i>
+            <div className="w-10 sm:w-12 h-10 sm:h-12 bg-cyber-yellow/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-yellow/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-yellow/30">
+              <i className="fas fa-folder text-lg sm:text-xl text-cyber-yellow"></i>
             </div>
-            <span className="text-xs mt-2 text-center font-medium">Files</span>
+            <span className="text-xs mt-1 sm:mt-2 text-center font-medium">Files</span>
           </div>
 
           <div
-            className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
+            className="desktop-icon flex flex-col items-center w-16 sm:w-20 p-2 sm:p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
             onClick={openSettings}
           >
-            <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center group-hover:bg-purple-500/40 transition-all group-hover:shadow-lg group-hover:shadow-purple-500/30">
-              <i className="fas fa-cog text-xl text-purple-500"></i>
+            <div className="w-10 sm:w-12 h-10 sm:h-12 bg-purple-500/20 rounded-xl flex items-center justify-center group-hover:bg-purple-500/40 transition-all group-hover:shadow-lg group-hover:shadow-purple-500/30">
+              <i className="fas fa-cog text-lg sm:text-xl text-purple-500"></i>
             </div>
-            <span className="text-xs mt-2 text-center font-medium">
+            <span className="text-xs mt-1 sm:mt-2 text-center font-medium">
               Settings
             </span>
           </div>
         </div>
 
-        {/* Event Apps Row - Always visible */}
-        <div className="absolute top-24 left-32 grid grid-cols-4 gap-4 z-10">
+        {/* Event Apps Row - Mobile Responsive */}
+        <div className="absolute top-48 sm:top-24 left-2 sm:left-32 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 z-10">
           {/* CODEUNDRUM */}
           <div
-            className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
+            className="desktop-icon flex flex-col items-center w-16 sm:w-20 p-2 sm:p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
             onClick={() =>
               windowManager.createWindow(
                 "codeundrum-app",
@@ -343,17 +349,17 @@ export default function Desktop() {
               )
             }
           >
-            <div className="w-12 h-12 bg-cyber-green/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-green/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-green/30">
-              <i className="fas fa-code text-xl text-cyber-green"></i>
+            <div className="w-10 sm:w-12 h-10 sm:h-12 bg-cyber-green/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-green/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-green/30">
+              <i className="fas fa-code text-lg sm:text-xl text-cyber-green"></i>
             </div>
-            <span className="text-xs mt-2 text-center font-medium">
+            <span className="text-xs mt-1 sm:mt-2 text-center font-medium">
               CODEUNDRUM
             </span>
           </div>
 
           {/* HACKADEMIA */}
           <div
-            className="desktop-icon flex flex-col items-center w-20 p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
+            className="desktop-icon flex flex-col items-center w-16 sm:w-20 p-2 sm:p-3 rounded-xl hover:bg-white/10 transition-all cursor-pointer group"
             onClick={() =>
               windowManager.createWindow(
                 "hackademia-app",
@@ -361,10 +367,10 @@ export default function Desktop() {
               )
             }
           >
-            <div className="w-12 h-12 bg-cyber-cyan/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-cyan/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-cyan/30">
-              <i className="fas fa-robot text-xl text-cyber-cyan"></i>
+            <div className="w-10 sm:w-12 h-10 sm:h-12 bg-cyber-cyan/20 rounded-xl flex items-center justify-center group-hover:bg-cyber-cyan/40 transition-all group-hover:shadow-lg group-hover:shadow-cyber-cyan/30">
+              <i className="fas fa-robot text-lg sm:text-xl text-cyber-cyan"></i>
             </div>
-            <span className="text-xs mt-2 text-center font-medium">
+            <span className="text-xs mt-1 sm:mt-2 text-center font-medium">
               HACKADEMIA
             </span>
           </div>
@@ -483,8 +489,8 @@ export default function Desktop() {
         </div>
       </div>
 
-      {/* Dock */}
-      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 cyber-glass rounded-2xl px-6 py-3 z-30">
+      {/* Dock - Hidden on Mobile */}
+      <div className="hidden sm:block fixed bottom-4 left-1/2 transform -translate-x-1/2 cyber-glass rounded-2xl px-6 py-3 z-30">
         <div className="flex space-x-4">
           <div
             className="dock-icon w-12 h-12 bg-cyber-green/20 rounded-xl flex items-center justify-center hover:bg-cyber-green/40 transition-all cursor-pointer glow-hover"
@@ -515,6 +521,98 @@ export default function Desktop() {
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {showMobileMenu && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 sm:hidden">
+          <div className="cyber-glass m-4 mt-20 p-6 rounded-lg">
+            <h3 className="text-cyber-cyan font-display text-lg mb-4">Quick Access</h3>
+            <div className="grid grid-cols-2 gap-4">
+              <button
+                onClick={() => {
+                  openTerminal();
+                  setShowMobileMenu(false);
+                }}
+                className="flex flex-col items-center p-4 rounded-xl bg-cyber-green/20 hover:bg-cyber-green/40 transition-all"
+              >
+                <i className="fas fa-terminal text-2xl text-cyber-green mb-2"></i>
+                <span className="text-sm">Terminal</span>
+              </button>
+              <button
+                onClick={() => {
+                  openAppCenter();
+                  setShowMobileMenu(false);
+                }}
+                className="flex flex-col items-center p-4 rounded-xl bg-cyber-cyan/20 hover:bg-cyber-cyan/40 transition-all"
+              >
+                <i className="fas fa-th text-2xl text-cyber-cyan mb-2"></i>
+                <span className="text-sm">App Center</span>
+              </button>
+              <button
+                onClick={() => {
+                  openSettings();
+                  setShowMobileMenu(false);
+                }}
+                className="flex flex-col items-center p-4 rounded-xl bg-purple-500/20 hover:bg-purple-500/40 transition-all"
+              >
+                <i className="fas fa-cog text-2xl text-purple-500 mb-2"></i>
+                <span className="text-sm">Settings</span>
+              </button>
+              <button
+                onClick={() => {
+                  openFileManager();
+                  setShowMobileMenu(false);
+                }}
+                className="flex flex-col items-center p-4 rounded-xl bg-cyber-yellow/20 hover:bg-cyber-yellow/40 transition-all"
+              >
+                <i className="fas fa-folder text-2xl text-cyber-yellow mb-2"></i>
+                <span className="text-sm">Files</span>
+              </button>
+            </div>
+            <div className="mt-6">
+              <h4 className="text-cyber-pink font-semibold mb-3">Events</h4>
+              <div className="grid grid-cols-2 gap-2 text-sm">
+                <button
+                  onClick={() => {
+                    windowManager.createWindow("codeundrum-app", "CODEUNDRUM - Event Details");
+                    setShowMobileMenu(false);
+                  }}
+                  className="p-2 rounded bg-cyber-green/20 text-cyber-green"
+                >
+                  CODEUNDRUM
+                </button>
+                <button
+                  onClick={() => {
+                    windowManager.createWindow("hackademia-app", "HACKADEMIA - Event Details");
+                    setShowMobileMenu(false);
+                  }}
+                  className="p-2 rounded bg-cyber-cyan/20 text-cyber-cyan"
+                >
+                  HACKADEMIA
+                </button>
+                <button
+                  onClick={() => {
+                    windowManager.createWindow("cyphranexus-app", "CYPHRANEXUS - Event Details");
+                    setShowMobileMenu(false);
+                  }}
+                  className="p-2 rounded bg-cyber-pink/20 text-cyber-pink"
+                >
+                  CYPHRANEXUS
+                </button>
+                <button
+                  onClick={() => {
+                    windowManager.createWindow("high-stakes-app", "HIGH STAKES - Event Details");
+                    setShowMobileMenu(false);
+                  }}
+                  className="p-2 rounded bg-purple-500/20 text-purple-500"
+                >
+                  HIGH STAKES
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
