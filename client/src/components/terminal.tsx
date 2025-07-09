@@ -12,7 +12,20 @@ export default function Terminal() {
   const [lines, setLines] = useState<TerminalLine[]>([
     {
       type: "output",
-      content: "Welcome to CYBERNAUTICA Terminal v2.1.0\nType 'help' for available commands\n All important details are present here...navigate the filesystem to find them.",
+      content: `<span class="text-cyber-green">╔══════════════════════════════════════════════════════════════╗</span>
+<span class="text-cyber-green">║</span>                <span class="text-cyber-pink">CYBERNAUTICA TERMINAL v2.1.0</span>               <span class="text-cyber-green">║</span>
+<span class="text-cyber-green">║</span>              <span class="text-cyber-cyan">"In Code We Trust, In Logic We Verify"</span>         <span class="text-cyber-green">║</span>
+<span class="text-cyber-green">╚══════════════════════════════════════════════════════════════╝</span>
+
+<span class="text-cyber-yellow">⚠️  CLASSIFIED SYSTEM DETECTED ⚠️</span>
+<span class="text-cyber-cyan">Deep secrets lie hidden within this file system...</span>
+<span class="text-cyber-pink">Are you worthy of the CYBERNAUTICA Mysteries?</span>
+
+<span class="text-cyber-green">Type 'help' for standard commands</span>
+<span class="text-cyber-yellow">Type 'help' again to see treasure hunt commands</span>
+<span class="text-cyber-cyan">Navigate the filesystem to uncover ancient puzzles...</span>
+
+<span class="text-cyber-pink">🔍 The journey of a thousand decryptions begins with a single 'ls'</span>`,
       timestamp: Date.now(),
     },
   ]);
