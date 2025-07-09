@@ -117,6 +117,13 @@ Changelog:
   - Added comprehensive event apps with real content for all 7 events
   - Updated announcements with actual event dates and information
   - Added event head contact information for all events
+- July 09, 2025. Mobile responsiveness and desktop enhancement:
+  - Added complete mobile responsive design with hamburger menu
+  - Implemented auto-maximizing windows for mobile devices
+  - Added tutorial widget on desktop with getting started guide
+  - Added "Coming Soon" widget showing upcoming features
+  - Enhanced mobile navigation with touch-friendly interface
+  - Hidden dock on mobile, replaced with overlay menu system
 ```
 
 ## User Preferences

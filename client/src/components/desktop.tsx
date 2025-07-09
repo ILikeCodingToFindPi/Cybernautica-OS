@@ -288,6 +288,70 @@ export default function Desktop() {
           </div>
         </div>
 
+        {/* Tutorial Widget */}
+        <div className="fixed top-20 right-4 w-80 max-w-sm cyber-glass rounded-lg p-4 z-20 hidden lg:block widget-entrance shadow-lg shadow-cyber-cyan/20">
+          <div className="flex items-center mb-3">
+            <i className="fas fa-graduation-cap text-cyber-cyan mr-2 text-lg"></i>
+            <h3 className="text-cyber-cyan font-display text-sm font-bold neon-text">Getting Started</h3>
+          </div>
+          <div className="space-y-2 text-xs text-gray-300">
+            <div className="flex items-start space-x-2 hover:bg-cyber-cyan/10 p-1 rounded transition-all">
+              <span className="text-cyber-green font-bold">1.</span>
+              <span>Open Terminal to explore the system</span>
+            </div>
+            <div className="flex items-start space-x-2 hover:bg-cyber-cyan/10 p-1 rounded transition-all">
+              <span className="text-cyber-cyan font-bold">2.</span>
+              <span>Visit App Center to install event apps</span>
+            </div>
+            <div className="flex items-start space-x-2 hover:bg-cyber-cyan/10 p-1 rounded transition-all">
+              <span className="text-cyber-pink font-bold">3.</span>
+              <span>Try commands like 'help' and 'ls' in Terminal</span>
+            </div>
+            <div className="flex items-start space-x-2 hover:bg-cyber-cyan/10 p-1 rounded transition-all">
+              <span className="text-cyber-yellow font-bold">4.</span>
+              <span>Explore hidden directories for mysteries...</span>
+            </div>
+          </div>
+          <div className="mt-3 pt-2 border-t border-cyber-cyan/20">
+            <div className="flex items-center space-x-2">
+              <i className="fas fa-lightbulb text-cyber-cyan text-xs animate-pulse"></i>
+              <span className="text-xs text-cyber-cyan opacity-75">Some secrets require investigation</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Coming Soon Widget */}
+        <div className="fixed bottom-20 left-4 w-72 max-w-sm cyber-glass rounded-lg p-4 z-20 hidden lg:block widget-entrance shadow-lg shadow-cyber-pink/20">
+          <div className="flex items-center mb-3">
+            <i className="fas fa-rocket text-cyber-pink mr-2 text-lg"></i>
+            <h3 className="text-cyber-pink font-display text-sm font-bold neon-text">Coming Soon</h3>
+          </div>
+          <div className="space-y-2">
+            <div className="flex items-center space-x-2 text-xs hover:bg-cyber-pink/10 p-1 rounded transition-all">
+              <div className="w-2 h-2 bg-cyber-green rounded-full pulse-dot"></div>
+              <span className="text-gray-300">Enhanced File System</span>
+            </div>
+            <div className="flex items-center space-x-2 text-xs hover:bg-cyber-pink/10 p-1 rounded transition-all">
+              <div className="w-2 h-2 bg-cyber-cyan rounded-full pulse-dot" style={{animationDelay: "0.2s"}}></div>
+              <span className="text-gray-300">Collaborative Coding Environment</span>
+            </div>
+            <div className="flex items-center space-x-2 text-xs hover:bg-cyber-pink/10 p-1 rounded transition-all">
+              <div className="w-2 h-2 bg-cyber-yellow rounded-full pulse-dot" style={{animationDelay: "0.4s"}}></div>
+              <span className="text-gray-300">Advanced Cryptographic Challenges</span>
+            </div>
+            <div className="flex items-center space-x-2 text-xs hover:bg-cyber-pink/10 p-1 rounded transition-all">
+              <div className="w-2 h-2 bg-cyber-purple rounded-full pulse-dot" style={{animationDelay: "0.6s"}}></div>
+              <span className="text-gray-300">Real-time Team Communication</span>
+            </div>
+          </div>
+          <div className="mt-3 pt-2 border-t border-cyber-pink/20">
+            <div className="flex items-center space-x-2">
+              <i className="fas fa-star text-cyber-pink text-xs animate-spin" style={{animationDuration: "3s"}}></i>
+              <span className="text-xs text-cyber-pink opacity-75">Stay tuned for updates!</span>
+            </div>
+          </div>
+        </div>
+
         {/* Desktop Icons - System Apps - Mobile Responsive */}
         <div className="absolute top-20 sm:top-24 left-2 sm:left-8 grid grid-cols-4 sm:grid-cols-1 gap-2 sm:gap-4 z-10 sm:space-y-0">
           <div

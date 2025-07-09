@@ -176,6 +176,26 @@
     }
   }
 
+  /* Widget animations */
+  .widget-entrance {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .pulse-dot {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   /* Logo styling */
   .logo-header {
     filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.5));
